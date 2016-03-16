@@ -1,7 +1,0 @@
-C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddItem\bin\Debug\ConsoleAddItem.exe.config
-C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddItem\bin\Debug\ConsoleAddItem.exe
-C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddItem\bin\Debug\ConsoleAddItem.pdb
-C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddItem\bin\Debug\eBay.Service.dll
-C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddItem\bin\Debug\eBay.Service.xml
-C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddItem\obj\Debug\ConsoleAddItem.exe
-C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddItem\obj\Debug\ConsoleAddItem.pdb
