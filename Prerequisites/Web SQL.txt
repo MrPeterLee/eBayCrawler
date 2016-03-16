@@ -1,0 +1,12 @@
+SQL Host:
+SQL User Name: ebayfetch
+pass:
+SQL read only user: ebayfetchuser
+pass: Sample123
+
+
+Connection of Database:
+eBayFetchSQLConnectionStrLocal
+
+DataSet Name:
+eBayFetchSQLDataSet

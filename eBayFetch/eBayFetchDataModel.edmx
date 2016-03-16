@@ -1,0 +1,1419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="eBayFetchSQLModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="eBayFetchSQLModelStoreContainer">
+    <EntitySet Name="S1SearchTable" EntityType="eBayFetchSQLModel.Store.S1SearchTable" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="S2ItemInfo" EntityType="eBayFetchSQLModel.Store.S2ItemInfo" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="S3UserDetail" EntityType="eBayFetchSQLModel.Store.S3UserDetail" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="S4PanelData" EntityType="eBayFetchSQLModel.Store.S4PanelData" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="sysdiagrams" EntityType="eBayFetchSQLModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+  </EntityContainer>
+  <EntityType Name="S1SearchTable">
+    <Key>
+      <PropertyRef Name="SearchID" />
+    </Key>
+    <Property Name="SearchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FetchTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTimeDum" Type="int" Nullable="true" />
+    <Property Name="IsInPanelData" Type="int" Nullable="true" />
+    <Property Name="Category" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CategoryID" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="S2ItemInfo">
+    <Key>
+      <PropertyRef Name="SearchID" />
+    </Key>
+    <Property Name="SearchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SellerID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FetchTime" Type="datetime" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PrivateListing" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BuyItNowPrice" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BidCount" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Quantity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="QuantitySold" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PrimaryCategory" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PrimaryCategoryID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsInPanelData" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="S3UserDetail">
+    <Key>
+      <PropertyRef Name="TableIndex" />
+    </Key>
+    <Property Name="TableIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FeedBackScore" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerRegDate" Type="datetime" Nullable="true" />
+    <Property Name="SellerLevel" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Site" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerStar" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerStore" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UserIsNewReg" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerVerified" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerIDChanged" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MotorsDealer" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="S4PanelData">
+    <Key>
+      <PropertyRef Name="SearchID" />
+    </Key>
+    <Property Name="SearchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemID" Type="varchar(max)" Nullable="false" />
+    <Property Name="SellerID" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Title" Type="varchar(max)" Nullable="true" />
+    <Property Name="FetchTime" Type="datetime" Nullable="true" />
+    <Property Name="StartTime" Type="datetime" Nullable="true" />
+    <Property Name="EndTime" Type="datetime" Nullable="true" />
+    <Property Name="Price" Type="varchar(max)" Nullable="true" />
+    <Property Name="PrivateListing" Type="varchar(max)" Nullable="true" />
+    <Property Name="BuyItNowPrice" Type="varchar(max)" Nullable="true" />
+    <Property Name="BidCount" Type="varchar(max)" Nullable="true" />
+    <Property Name="Quantity" Type="varchar(max)" Nullable="true" />
+    <Property Name="QuantitySold" Type="varchar(max)" Nullable="true" />
+    <Property Name="PrimaryCategory" Type="varchar(max)" Nullable="true" />
+    <Property Name="PrimaryCategoryID" Type="varchar(max)" Nullable="true" />
+    <Property Name="UserInfoFetched" Type="int" Nullable="true" />
+    <Property Name="Email" Type="varchar(max)" Nullable="true" />
+    <Property Name="FeedBackScore" Type="varchar(max)" Nullable="true" />
+    <Property Name="SellerRegDate" Type="datetime" Nullable="true" />
+    <Property Name="SellerLevel" Type="varchar(max)" Nullable="true" />
+    <Property Name="Site" Type="varchar(max)" Nullable="true" />
+    <Property Name="SellerStar" Type="varchar(max)" Nullable="true" />
+    <Property Name="SellerStore" Type="varchar(max)" Nullable="true" />
+    <Property Name="UserIsNewReg" Type="varchar(max)" Nullable="true" />
+    <Property Name="SellerVerified" Type="varchar(max)" Nullable="true" />
+    <Property Name="SellerIDChanged" Type="varchar(max)" Nullable="true" />
+    <Property Name="Ones" Type="int" Nullable="true" />
+    <Property Name="MotorsDealer" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SecondaryCategoryCategoryName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SecondaryCategoryCategoryID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusHighBidderUserID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BestOfferDetailsBestOfferCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BestOfferDetailsBestOfferEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ProductListingDetailsProductID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PictureDetailsPictureURL" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PayPalEmailAddress" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ApplicationData" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PicNumber" Type="int" Nullable="true" />
+    <Property Name="BuyerProtection" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BuyerResponsibleForShipping" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BuyItNowPricecurrencyID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BuyItNowPriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BuyerGuaranteePricecurrencyID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BuyerGuaranteePriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CategoryBasedAttributesPrefill" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CategoryMappingAllowed" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CharityCharityID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ClassifiedAdPayPerLeadFeecurrencyID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ClassifiedAdPayPerLeadFeeValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ConditionDisplayName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ConditionID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Country" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CrossBorderTrade" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CrossPromotionItemID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Currency" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DescriptionReviseMode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DisableBuyerRequirements" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DispatchTimeMax" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DistanceDistanceUnit" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="eBayNotes" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryAutoPayEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryB2BVATEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryBestOfferEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryCatalogEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryCategoryID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryCategoryLevel" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryCategoryName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryCategoryParentID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryCategoryParentName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryCharacteristicsSets" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryExpired" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryIntlAutosFixedCat" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryKeywords" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryLeafCategory" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryLSD" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryNumOfItems" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryORPA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryORRA" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryProductFinderIDs" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryProductSearchPageAvailable" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategorySellerGuaranteeEligible" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FreeAddedCategoryVirtual" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GetItFast" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GiftIcon" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GiftServices" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="GroupCategoryID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="HitCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="HitCounter" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="IntegratedMerchantCreditCardEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="InventoryTrackingMethod" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemCompatibilityListCompatibility" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemCompatibilityCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemPolicyViolationPolicyID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemPolicyViolationPolicyText" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecifics" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LeadCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LimitedWarrantyEligible" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingCheckoutRedirectPreferenceProStoresStoreName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingCheckoutRedirectPreferenceSellerThirdPartyUsername" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDesignerLayoutID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDesignerThemeID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDesignerOptimalPictureSize" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsAdult" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsBestOfferAutoAcceptPriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsBindingAuction" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsBuyItNowAvailable" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsCheckoutEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsConvertedBuyItNowPriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsConvertedReservePriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsConvertedStartPriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsEndTime" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsHasPublicMessages" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsHasReservePrice" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsHasUnansweredQuestions" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsLocalListingDistance" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsMinimumBestOfferMessage" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsMinimumBestOfferPriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsPayPerLeadEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsRelistedItemID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsSecondChanceOriginalItemID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsSellerBusinessType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsStartTime" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsTCROriginalItemID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDetailsViewItemURL" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingDuration" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingEnhancement" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingSubtype2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ListingType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LocalListing" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LocationDefaulted" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LotSize" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MechanicalCheckAccepted" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MotorsGermanySearchable" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="NewLeadCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PartnerCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PartnerName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PaymentAllowedSite" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PaymentDetailsDaysToFullPayment" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PaymentDetailsHoursToDeposit" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PaymentMethods" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PostalCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PrivateNotes" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ProductListingDetails" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ProxyItem" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="QuantityAvailable" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="QuantitySpecified" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="QuestionCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="RegionID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Relisted" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="RelistLink" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ReservePriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ReservePricecurrencyID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ReturnPolicyRefund" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ReturnPolicyRefundOption" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ReturnPolicyReturnsAccepted" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ReturnPolicyReturnsWithin" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ReturnPolicyShippingCostPaidBy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ReturnPolicyWarrantyDuration" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ReturnPolicyWarrantyOffered" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ReturnPolicyWarrantyType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ScheduleTime" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SearchDetailsPicture" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SearchDetailsRecentListing" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SearchDetailsBuyItNowEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerAboutMePage" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerBillingEmail" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerCharityAffiliationsCharityID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellereBayGoodStanding" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellereBayWikiReadOnly" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerEIASToken" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerEmail" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerEnterpriseSeller" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerFeedbackPrivate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerFeedbackRatingStar" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerFeedbackScore" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerIDVerified" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerMotorsDealer" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerNewUser" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerPayPalAccountLevel" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerPayPalAccountStatus" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerPayPalAccountType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerPositiveFeedbackPercent" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerQualifiesForSelling" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerRegistrationAddress" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerRegistrationDate" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerSellerPaymentMethod" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerTUVLevel" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerUniqueNegativeFeedbackCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerUniqueNeutralFeedbackCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerUniquePositiveFeedbackCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerUserAnonymized" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerUserIDChanged" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerUserSubscription" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerVATID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerVATStatus" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsAddressID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsAddressOwner" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsAddressRecordType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsAddressStatus" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsAddressUsage" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsCityName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsCompanyName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsCountry" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsCountryName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsCounty" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsExternalAddressID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsFirstName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsLastName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsInternationalName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsInternationalStateAndCity" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsInternationalStreet" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsPhone" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsPhoneCountryCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsPhoneCountryPrefix" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsPhoneLocalNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsPostalCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsStateOrProvince" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsStreet" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsStreet1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerContactDetailsStreet2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerInventoryID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellerVacationNote" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusAdminEnded" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusBidCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusBidderCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusBidIncrementValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusBidIncrementcurrencyID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusConvertedCurrentPriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusCurrentPriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusFinalValueFeeValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusLeadCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusListingStatus" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusMinimumToBid" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusPromotionalSaleDetailsEndTime" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusQuantitySold" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusReserveMet" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SellingStatusSecondChanceEligible" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ShippingDetailsAllowPaymentEdit" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ShippingDetailsApplyShippingDiscount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ShippingDetailsCalculatedShippingDiscountDiscountName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ShippingDetailsCalculatedShippingDiscountDiscountProfile" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ShippingDetailsInsuranceFeeValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ShipToLocations" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SKU" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SkypeEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SkypeID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StartPriceValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StartPricecurrencyID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StorefrontStoreName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StorefrontStoreCategoryID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StorefrontStoreCategory2ID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SubTitle" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TaxCategory" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ThirdPartyCheckout" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ThirdPartyCheckoutIntegration" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TimeLeft" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="TotalQuestionCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdateReturnPolicy" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UpdateSellerInfo" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UseTaxTable" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="UUID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Variations" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="VATDetailsVATID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="WatchCount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="WatchCountSpecified" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ApplyBuyerProtectionBuyerProtectionSource" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ApplyBuyerProtectionBuyerProtectionStatus" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ApplyShippingDiscount" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AutoPay" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BestOfferDetailsBestOffercurrencyID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BestOfferDetailsBestOfferValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BestOfferDetailsBestOfferStatus" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BestOfferDetailsBestOfferType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BestOfferEnabled" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BiddingDetailsBidAssistant" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BiddingDetailsConvertedMaxBidcurrencyID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BiddingDetailsConvertedMaxBidValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BiddingDetailsMaxBidcurrencyID" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BiddingDetailsMaxBidValue" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BiddingDetailsQuantityBid" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BiddingDetailsQuantityWon" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BiddingDetailsWinning" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BidGroupItem" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific1" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific3" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific4" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific5" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific6" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific7" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific8" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific9" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific10" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific11" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific12" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific13" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific14" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific15" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific16" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific17" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific18" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific19" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific20" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific21" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific22" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific23" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific24" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific25" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific26" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific27" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific28" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific29" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific30" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific31" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific32" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific33" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific34" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific35" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific36" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific37" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific38" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific39" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific40" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific41" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific42" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific43" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific44" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific45" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific46" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific47" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific48" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific49" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific50" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific51" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific52" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific53" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific54" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific55" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific56" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific57" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific58" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific59" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific60" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific61" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific62" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific63" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific64" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific65" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific66" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific67" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific68" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific69" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific70" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific71" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific72" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific73" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific74" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific75" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific76" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific77" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific78" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific79" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific80" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific81" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific82" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific83" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific84" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific85" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific86" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific87" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific88" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific89" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific90" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific91" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific92" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific93" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific94" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific95" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific96" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific97" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific98" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific99" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ItemSpecific100" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" Nullable="true" />
+    <Property Name="definition" Type="varbinary(max)" Nullable="true" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="eBayFetchSQLModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="eBayFetchSQLEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="S1SearchTable" EntityType="eBayFetchSQLModel.S1SearchTable" />
+          <EntitySet Name="S2ItemInfo" EntityType="eBayFetchSQLModel.S2ItemInfo" />
+          <EntitySet Name="S3UserDetail" EntityType="eBayFetchSQLModel.S3UserDetail" />
+          <EntitySet Name="S4PanelData" EntityType="eBayFetchSQLModel.S4PanelData" />
+          <EntitySet Name="sysdiagrams" EntityType="eBayFetchSQLModel.sysdiagram" />
+        </EntityContainer>
+        <EntityType Name="S1SearchTable">
+          <Key>
+            <PropertyRef Name="SearchID" />
+          </Key>
+          <Property Type="Int32" Name="SearchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="ItemID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FetchTime" Nullable="false" />
+          <Property Type="Int32" Name="EndTimeDum" />
+          <Property Type="Int32" Name="IsInPanelData" />
+          <Property Type="String" Name="Category" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CategoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="S2ItemInfo">
+          <Key>
+            <PropertyRef Name="SearchID" />
+          </Key>
+          <Property Type="Int32" Name="SearchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="ItemID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FetchTime" Nullable="false" />
+          <Property Type="DateTime" Name="StartTime" Nullable="false" />
+          <Property Type="DateTime" Name="EndTime" Nullable="false" />
+          <Property Type="String" Name="Price" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrivateListing" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuyItNowPrice" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BidCount" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Quantity" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="QuantitySold" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryCategory" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimaryCategoryID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="IsInPanelData" />
+        </EntityType>
+        <EntityType Name="S3UserDetail">
+          <Key>
+            <PropertyRef Name="TableIndex" />
+          </Key>
+          <Property Type="Int32" Name="TableIndex" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="UserID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FeedBackScore" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="SellerRegDate" />
+          <Property Type="String" Name="SellerLevel" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Site" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerStar" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerStore" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserIsNewReg" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerVerified" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerIDChanged" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotorsDealer" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="S4PanelData">
+          <Key>
+            <PropertyRef Name="SearchID" />
+          </Key>
+          <Property Type="Int32" Name="SearchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="ItemID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SellerID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Title" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FetchTime" />
+          <Property Type="DateTime" Name="StartTime" />
+          <Property Type="DateTime" Name="EndTime" />
+          <Property Type="String" Name="Price" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PrivateListing" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BuyItNowPrice" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BidCount" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Quantity" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="QuantitySold" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PrimaryCategory" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PrimaryCategoryID" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UserInfoFetched" />
+          <Property Type="String" Name="Email" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FeedBackScore" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SellerRegDate" />
+          <Property Type="String" Name="SellerLevel" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Site" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SellerStar" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SellerStore" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UserIsNewReg" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SellerVerified" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SellerIDChanged" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Ones" />
+          <Property Type="String" Name="MotorsDealer" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecondaryCategoryCategoryName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SecondaryCategoryCategoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusHighBidderUserID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BestOfferDetailsBestOfferCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BestOfferDetailsBestOfferEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProductListingDetailsProductID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PictureDetailsPictureURL" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PayPalEmailAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ApplicationData" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PicNumber" />
+          <Property Type="String" Name="BuyerProtection" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuyerResponsibleForShipping" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuyItNowPricecurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuyItNowPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuyerGuaranteePricecurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BuyerGuaranteePriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CategoryBasedAttributesPrefill" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CategoryMappingAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CharityCharityID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClassifiedAdPayPerLeadFeecurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClassifiedAdPayPerLeadFeeValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConditionDisplayName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConditionID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Country" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CrossBorderTrade" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CrossPromotionItemID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Currency" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DescriptionReviseMode" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DisableBuyerRequirements" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DispatchTimeMax" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DistanceDistanceUnit" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="eBayNotes" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryAutoPayEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryB2BVATEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryBestOfferEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryCatalogEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryCategoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryCategoryLevel" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryCategoryName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryCategoryParentID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryCategoryParentName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryCharacteristicsSets" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryExpired" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryIntlAutosFixedCat" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryKeywords" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryLeafCategory" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryLSD" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryNumOfItems" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryORPA" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryORRA" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryProductFinderIDs" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryProductSearchPageAvailable" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategorySellerGuaranteeEligible" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FreeAddedCategoryVirtual" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GetItFast" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GiftIcon" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GiftServices" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GroupCategoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HitCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HitCounter" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IntegratedMerchantCreditCardEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="InventoryTrackingMethod" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemCompatibilityListCompatibility" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemCompatibilityCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemPolicyViolationPolicyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemPolicyViolationPolicyText" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecifics" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LeadCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LimitedWarrantyEligible" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingCheckoutRedirectPreferenceProStoresStoreName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingCheckoutRedirectPreferenceSellerThirdPartyUsername" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDesignerLayoutID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDesignerThemeID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDesignerOptimalPictureSize" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsAdult" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsBestOfferAutoAcceptPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsBindingAuction" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsBuyItNowAvailable" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsCheckoutEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsConvertedBuyItNowPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsConvertedReservePriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsConvertedStartPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsEndTime" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsHasPublicMessages" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsHasReservePrice" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsHasUnansweredQuestions" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsLocalListingDistance" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsMinimumBestOfferMessage" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsMinimumBestOfferPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsPayPerLeadEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsRelistedItemID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsSecondChanceOriginalItemID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsSellerBusinessType" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsStartTime" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsTCROriginalItemID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDetailsViewItemURL" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingDuration" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingEnhancement" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingSubtype2" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListingType" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LocalListing" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LocationDefaulted" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LotSize" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MechanicalCheckAccepted" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotorsGermanySearchable" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NewLeadCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PartnerCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PartnerName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PaymentAllowedSite" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PaymentDetailsDaysToFullPayment" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PaymentDetailsHoursToDeposit" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PaymentMethods" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PostalCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrivateNotes" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProductListingDetails" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProxyItem" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="QuantityAvailable" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="QuantitySpecified" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="QuestionCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RegionID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Relisted" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RelistLink" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReservePriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReservePricecurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReturnPolicyRefund" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReturnPolicyRefundOption" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReturnPolicyReturnsAccepted" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReturnPolicyReturnsWithin" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReturnPolicyShippingCostPaidBy" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReturnPolicyWarrantyDuration" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReturnPolicyWarrantyOffered" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ReturnPolicyWarrantyType" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ScheduleTime" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchDetailsPicture" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchDetailsRecentListing" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SearchDetailsBuyItNowEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerAboutMePage" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerBillingEmail" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerCharityAffiliationsCharityID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellereBayGoodStanding" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellereBayWikiReadOnly" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerEIASToken" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerEmail" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerEnterpriseSeller" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerFeedbackPrivate" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerFeedbackRatingStar" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerFeedbackScore" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerIDVerified" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerMotorsDealer" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerNewUser" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerPayPalAccountLevel" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerPayPalAccountStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerPayPalAccountType" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerPositiveFeedbackPercent" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerQualifiesForSelling" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerRegistrationAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerRegistrationDate" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerSellerPaymentMethod" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerTUVLevel" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerUniqueNegativeFeedbackCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerUniqueNeutralFeedbackCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerUniquePositiveFeedbackCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerUserAnonymized" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerUserIDChanged" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerUserSubscription" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerVATID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerVATStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsAddressID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsAddressOwner" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsAddressRecordType" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsAddressStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsAddressUsage" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsCityName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsCompanyName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsCountry" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsCountryName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsCounty" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsExternalAddressID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsFirstName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsLastName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsInternationalName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsInternationalStateAndCity" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsInternationalStreet" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsPhone" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsPhoneCountryCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsPhoneCountryPrefix" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsPhoneLocalNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsPostalCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsStateOrProvince" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsStreet" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsStreet1" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerContactDetailsStreet2" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerInventoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellerVacationNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusAdminEnded" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusBidCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusBidderCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusBidIncrementValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusBidIncrementcurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusConvertedCurrentPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusCurrentPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusFinalValueFeeValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusLeadCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusListingStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusMinimumToBid" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusPromotionalSaleDetailsEndTime" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusQuantitySold" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusReserveMet" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SellingStatusSecondChanceEligible" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShippingDetailsAllowPaymentEdit" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShippingDetailsApplyShippingDiscount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShippingDetailsCalculatedShippingDiscountDiscountName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShippingDetailsCalculatedShippingDiscountDiscountProfile" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShippingDetailsInsuranceFeeValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipToLocations" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SKU" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SkypeEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SkypeID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StartPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StartPricecurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StorefrontStoreName" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StorefrontStoreCategoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StorefrontStoreCategory2ID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SubTitle" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TaxCategory" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThirdPartyCheckout" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThirdPartyCheckoutIntegration" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TimeLeft" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TotalQuestionCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UpdateReturnPolicy" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UpdateSellerInfo" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UseTaxTable" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UUID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Variations" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VATDetailsVATID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WatchCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WatchCountSpecified" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ApplyBuyerProtectionBuyerProtectionSource" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ApplyBuyerProtectionBuyerProtectionStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ApplyShippingDiscount" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AutoPay" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BestOfferDetailsBestOffercurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BestOfferDetailsBestOfferValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BestOfferDetailsBestOfferStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BestOfferDetailsBestOfferType" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BestOfferEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BiddingDetailsBidAssistant" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BiddingDetailsConvertedMaxBidcurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BiddingDetailsConvertedMaxBidValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BiddingDetailsMaxBidcurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BiddingDetailsMaxBidValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BiddingDetailsQuantityBid" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BiddingDetailsQuantityWon" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BiddingDetailsWinning" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BidGroupItem" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific1" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific2" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific3" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific4" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific5" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific6" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific7" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific8" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific9" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific10" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific11" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific12" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific13" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific14" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific15" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific16" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific17" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific18" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific19" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific20" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific21" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific22" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific23" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific24" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific25" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific26" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific27" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific28" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific29" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific30" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific31" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific32" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific33" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific34" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific35" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific36" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific37" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific38" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific39" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific40" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific41" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific42" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific43" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific44" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific45" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific46" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific47" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific48" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific49" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific50" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific51" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific52" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific53" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific54" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific55" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific56" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific57" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific58" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific59" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific60" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific61" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific62" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific63" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific64" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific65" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific66" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific67" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific68" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific69" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific70" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific71" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific72" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific73" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific74" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific75" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific76" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific77" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific78" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific79" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific80" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific81" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific82" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific83" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific84" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific85" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific86" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific87" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific88" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific89" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific90" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific91" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific92" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific93" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific94" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific95" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific96" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific97" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific98" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific99" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ItemSpecific100" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="eBayFetchSQLModelStoreContainer" CdmEntityContainer="eBayFetchSQLEntities">
+    <EntitySetMapping Name="S1SearchTable">
+      <EntityTypeMapping TypeName="IsTypeOf(eBayFetchSQLModel.S1SearchTable)">
+        <MappingFragment StoreEntitySet="S1SearchTable">
+          <ScalarProperty Name="SearchID" ColumnName="SearchID" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FetchTime" ColumnName="FetchTime" />
+          <ScalarProperty Name="EndTimeDum" ColumnName="EndTimeDum" />
+          <ScalarProperty Name="IsInPanelData" ColumnName="IsInPanelData" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S2ItemInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(eBayFetchSQLModel.S2ItemInfo)">
+        <MappingFragment StoreEntitySet="S2ItemInfo">
+          <ScalarProperty Name="SearchID" ColumnName="SearchID" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="SellerID" ColumnName="SellerID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FetchTime" ColumnName="FetchTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PrivateListing" ColumnName="PrivateListing" />
+          <ScalarProperty Name="BuyItNowPrice" ColumnName="BuyItNowPrice" />
+          <ScalarProperty Name="BidCount" ColumnName="BidCount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="QuantitySold" ColumnName="QuantitySold" />
+          <ScalarProperty Name="PrimaryCategory" ColumnName="PrimaryCategory" />
+          <ScalarProperty Name="PrimaryCategoryID" ColumnName="PrimaryCategoryID" />
+          <ScalarProperty Name="IsInPanelData" ColumnName="IsInPanelData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S3UserDetail">
+      <EntityTypeMapping TypeName="IsTypeOf(eBayFetchSQLModel.S3UserDetail)">
+        <MappingFragment StoreEntitySet="S3UserDetail">
+          <ScalarProperty Name="TableIndex" ColumnName="TableIndex" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FeedBackScore" ColumnName="FeedBackScore" />
+          <ScalarProperty Name="SellerRegDate" ColumnName="SellerRegDate" />
+          <ScalarProperty Name="SellerLevel" ColumnName="SellerLevel" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="SellerStar" ColumnName="SellerStar" />
+          <ScalarProperty Name="SellerStore" ColumnName="SellerStore" />
+          <ScalarProperty Name="UserIsNewReg" ColumnName="UserIsNewReg" />
+          <ScalarProperty Name="SellerVerified" ColumnName="SellerVerified" />
+          <ScalarProperty Name="SellerIDChanged" ColumnName="SellerIDChanged" />
+          <ScalarProperty Name="MotorsDealer" ColumnName="MotorsDealer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S4PanelData">
+      <EntityTypeMapping TypeName="IsTypeOf(eBayFetchSQLModel.S4PanelData)">
+        <MappingFragment StoreEntitySet="S4PanelData">
+          <ScalarProperty Name="SearchID" ColumnName="SearchID" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="SellerID" ColumnName="SellerID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FetchTime" ColumnName="FetchTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PrivateListing" ColumnName="PrivateListing" />
+          <ScalarProperty Name="BuyItNowPrice" ColumnName="BuyItNowPrice" />
+          <ScalarProperty Name="BidCount" ColumnName="BidCount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="QuantitySold" ColumnName="QuantitySold" />
+          <ScalarProperty Name="PrimaryCategory" ColumnName="PrimaryCategory" />
+          <ScalarProperty Name="PrimaryCategoryID" ColumnName="PrimaryCategoryID" />
+          <ScalarProperty Name="UserInfoFetched" ColumnName="UserInfoFetched" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FeedBackScore" ColumnName="FeedBackScore" />
+          <ScalarProperty Name="SellerRegDate" ColumnName="SellerRegDate" />
+          <ScalarProperty Name="SellerLevel" ColumnName="SellerLevel" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="SellerStar" ColumnName="SellerStar" />
+          <ScalarProperty Name="SellerStore" ColumnName="SellerStore" />
+          <ScalarProperty Name="UserIsNewReg" ColumnName="UserIsNewReg" />
+          <ScalarProperty Name="SellerVerified" ColumnName="SellerVerified" />
+          <ScalarProperty Name="SellerIDChanged" ColumnName="SellerIDChanged" />
+          <ScalarProperty Name="Ones" ColumnName="Ones" />
+          <ScalarProperty Name="MotorsDealer" ColumnName="MotorsDealer" />
+          <ScalarProperty Name="SecondaryCategoryCategoryName" ColumnName="SecondaryCategoryCategoryName" />
+          <ScalarProperty Name="SecondaryCategoryCategoryID" ColumnName="SecondaryCategoryCategoryID" />
+          <ScalarProperty Name="SellingStatusHighBidderUserID" ColumnName="SellingStatusHighBidderUserID" />
+          <ScalarProperty Name="BestOfferDetailsBestOfferCount" ColumnName="BestOfferDetailsBestOfferCount" />
+          <ScalarProperty Name="BestOfferDetailsBestOfferEnabled" ColumnName="BestOfferDetailsBestOfferEnabled" />
+          <ScalarProperty Name="ProductListingDetailsProductID" ColumnName="ProductListingDetailsProductID" />
+          <ScalarProperty Name="PictureDetailsPictureURL" ColumnName="PictureDetailsPictureURL" />
+          <ScalarProperty Name="PayPalEmailAddress" ColumnName="PayPalEmailAddress" />
+          <ScalarProperty Name="ApplicationData" ColumnName="ApplicationData" />
+          <ScalarProperty Name="PicNumber" ColumnName="PicNumber" />
+          <ScalarProperty Name="BuyerProtection" ColumnName="BuyerProtection" />
+          <ScalarProperty Name="BuyerResponsibleForShipping" ColumnName="BuyerResponsibleForShipping" />
+          <ScalarProperty Name="BuyItNowPricecurrencyID" ColumnName="BuyItNowPricecurrencyID" />
+          <ScalarProperty Name="BuyItNowPriceValue" ColumnName="BuyItNowPriceValue" />
+          <ScalarProperty Name="BuyerGuaranteePricecurrencyID" ColumnName="BuyerGuaranteePricecurrencyID" />
+          <ScalarProperty Name="BuyerGuaranteePriceValue" ColumnName="BuyerGuaranteePriceValue" />
+          <ScalarProperty Name="CategoryBasedAttributesPrefill" ColumnName="CategoryBasedAttributesPrefill" />
+          <ScalarProperty Name="CategoryMappingAllowed" ColumnName="CategoryMappingAllowed" />
+          <ScalarProperty Name="CharityCharityID" ColumnName="CharityCharityID" />
+          <ScalarProperty Name="ClassifiedAdPayPerLeadFeecurrencyID" ColumnName="ClassifiedAdPayPerLeadFeecurrencyID" />
+          <ScalarProperty Name="ClassifiedAdPayPerLeadFeeValue" ColumnName="ClassifiedAdPayPerLeadFeeValue" />
+          <ScalarProperty Name="ConditionDisplayName" ColumnName="ConditionDisplayName" />
+          <ScalarProperty Name="ConditionID" ColumnName="ConditionID" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="CrossBorderTrade" ColumnName="CrossBorderTrade" />
+          <ScalarProperty Name="CrossPromotionItemID" ColumnName="CrossPromotionItemID" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="DescriptionReviseMode" ColumnName="DescriptionReviseMode" />
+          <ScalarProperty Name="DisableBuyerRequirements" ColumnName="DisableBuyerRequirements" />
+          <ScalarProperty Name="DispatchTimeMax" ColumnName="DispatchTimeMax" />
+          <ScalarProperty Name="DistanceDistanceUnit" ColumnName="DistanceDistanceUnit" />
+          <ScalarProperty Name="eBayNotes" ColumnName="eBayNotes" />
+          <ScalarProperty Name="FreeAddedCategoryAutoPayEnabled" ColumnName="FreeAddedCategoryAutoPayEnabled" />
+          <ScalarProperty Name="FreeAddedCategoryB2BVATEnabled" ColumnName="FreeAddedCategoryB2BVATEnabled" />
+          <ScalarProperty Name="FreeAddedCategoryBestOfferEnabled" ColumnName="FreeAddedCategoryBestOfferEnabled" />
+          <ScalarProperty Name="FreeAddedCategoryCatalogEnabled" ColumnName="FreeAddedCategoryCatalogEnabled" />
+          <ScalarProperty Name="FreeAddedCategoryCategoryID" ColumnName="FreeAddedCategoryCategoryID" />
+          <ScalarProperty Name="FreeAddedCategoryCategoryLevel" ColumnName="FreeAddedCategoryCategoryLevel" />
+          <ScalarProperty Name="FreeAddedCategoryCategoryName" ColumnName="FreeAddedCategoryCategoryName" />
+          <ScalarProperty Name="FreeAddedCategoryCategoryParentID" ColumnName="FreeAddedCategoryCategoryParentID" />
+          <ScalarProperty Name="FreeAddedCategoryCategoryParentName" ColumnName="FreeAddedCategoryCategoryParentName" />
+          <ScalarProperty Name="FreeAddedCategoryCharacteristicsSets" ColumnName="FreeAddedCategoryCharacteristicsSets" />
+          <ScalarProperty Name="FreeAddedCategoryExpired" ColumnName="FreeAddedCategoryExpired" />
+          <ScalarProperty Name="FreeAddedCategoryIntlAutosFixedCat" ColumnName="FreeAddedCategoryIntlAutosFixedCat" />
+          <ScalarProperty Name="FreeAddedCategoryKeywords" ColumnName="FreeAddedCategoryKeywords" />
+          <ScalarProperty Name="FreeAddedCategoryLeafCategory" ColumnName="FreeAddedCategoryLeafCategory" />
+          <ScalarProperty Name="FreeAddedCategoryLSD" ColumnName="FreeAddedCategoryLSD" />
+          <ScalarProperty Name="FreeAddedCategoryNumOfItems" ColumnName="FreeAddedCategoryNumOfItems" />
+          <ScalarProperty Name="FreeAddedCategoryORPA" ColumnName="FreeAddedCategoryORPA" />
+          <ScalarProperty Name="FreeAddedCategoryORRA" ColumnName="FreeAddedCategoryORRA" />
+          <ScalarProperty Name="FreeAddedCategoryProductFinderIDs" ColumnName="FreeAddedCategoryProductFinderIDs" />
+          <ScalarProperty Name="FreeAddedCategoryProductSearchPageAvailable" ColumnName="FreeAddedCategoryProductSearchPageAvailable" />
+          <ScalarProperty Name="FreeAddedCategorySellerGuaranteeEligible" ColumnName="FreeAddedCategorySellerGuaranteeEligible" />
+          <ScalarProperty Name="FreeAddedCategoryVirtual" ColumnName="FreeAddedCategoryVirtual" />
+          <ScalarProperty Name="GetItFast" ColumnName="GetItFast" />
+          <ScalarProperty Name="GiftIcon" ColumnName="GiftIcon" />
+          <ScalarProperty Name="GiftServices" ColumnName="GiftServices" />
+          <ScalarProperty Name="GroupCategoryID" ColumnName="GroupCategoryID" />
+          <ScalarProperty Name="HitCount" ColumnName="HitCount" />
+          <ScalarProperty Name="HitCounter" ColumnName="HitCounter" />
+          <ScalarProperty Name="IntegratedMerchantCreditCardEnabled" ColumnName="IntegratedMerchantCreditCardEnabled" />
+          <ScalarProperty Name="InventoryTrackingMethod" ColumnName="InventoryTrackingMethod" />
+          <ScalarProperty Name="ItemCompatibilityListCompatibility" ColumnName="ItemCompatibilityListCompatibility" />
+          <ScalarProperty Name="ItemCompatibilityCount" ColumnName="ItemCompatibilityCount" />
+          <ScalarProperty Name="ItemPolicyViolationPolicyID" ColumnName="ItemPolicyViolationPolicyID" />
+          <ScalarProperty Name="ItemPolicyViolationPolicyText" ColumnName="ItemPolicyViolationPolicyText" />
+          <ScalarProperty Name="ItemSpecifics" ColumnName="ItemSpecifics" />
+          <ScalarProperty Name="LeadCount" ColumnName="LeadCount" />
+          <ScalarProperty Name="LimitedWarrantyEligible" ColumnName="LimitedWarrantyEligible" />
+          <ScalarProperty Name="ListingCheckoutRedirectPreferenceProStoresStoreName" ColumnName="ListingCheckoutRedirectPreferenceProStoresStoreName" />
+          <ScalarProperty Name="ListingCheckoutRedirectPreferenceSellerThirdPartyUsername" ColumnName="ListingCheckoutRedirectPreferenceSellerThirdPartyUsername" />
+          <ScalarProperty Name="ListingDesignerLayoutID" ColumnName="ListingDesignerLayoutID" />
+          <ScalarProperty Name="ListingDesignerThemeID" ColumnName="ListingDesignerThemeID" />
+          <ScalarProperty Name="ListingDesignerOptimalPictureSize" ColumnName="ListingDesignerOptimalPictureSize" />
+          <ScalarProperty Name="ListingDetailsAdult" ColumnName="ListingDetailsAdult" />
+          <ScalarProperty Name="ListingDetailsBestOfferAutoAcceptPriceValue" ColumnName="ListingDetailsBestOfferAutoAcceptPriceValue" />
+          <ScalarProperty Name="ListingDetailsBindingAuction" ColumnName="ListingDetailsBindingAuction" />
+          <ScalarProperty Name="ListingDetailsBuyItNowAvailable" ColumnName="ListingDetailsBuyItNowAvailable" />
+          <ScalarProperty Name="ListingDetailsCheckoutEnabled" ColumnName="ListingDetailsCheckoutEnabled" />
+          <ScalarProperty Name="ListingDetailsConvertedBuyItNowPriceValue" ColumnName="ListingDetailsConvertedBuyItNowPriceValue" />
+          <ScalarProperty Name="ListingDetailsConvertedReservePriceValue" ColumnName="ListingDetailsConvertedReservePriceValue" />
+          <ScalarProperty Name="ListingDetailsConvertedStartPriceValue" ColumnName="ListingDetailsConvertedStartPriceValue" />
+          <ScalarProperty Name="ListingDetailsEndTime" ColumnName="ListingDetailsEndTime" />
+          <ScalarProperty Name="ListingDetailsHasPublicMessages" ColumnName="ListingDetailsHasPublicMessages" />
+          <ScalarProperty Name="ListingDetailsHasReservePrice" ColumnName="ListingDetailsHasReservePrice" />
+          <ScalarProperty Name="ListingDetailsHasUnansweredQuestions" ColumnName="ListingDetailsHasUnansweredQuestions" />
+          <ScalarProperty Name="ListingDetailsLocalListingDistance" ColumnName="ListingDetailsLocalListingDistance" />
+          <ScalarProperty Name="ListingDetailsMinimumBestOfferMessage" ColumnName="ListingDetailsMinimumBestOfferMessage" />
+          <ScalarProperty Name="ListingDetailsMinimumBestOfferPriceValue" ColumnName="ListingDetailsMinimumBestOfferPriceValue" />
+          <ScalarProperty Name="ListingDetailsPayPerLeadEnabled" ColumnName="ListingDetailsPayPerLeadEnabled" />
+          <ScalarProperty Name="ListingDetailsRelistedItemID" ColumnName="ListingDetailsRelistedItemID" />
+          <ScalarProperty Name="ListingDetailsSecondChanceOriginalItemID" ColumnName="ListingDetailsSecondChanceOriginalItemID" />
+          <ScalarProperty Name="ListingDetailsSellerBusinessType" ColumnName="ListingDetailsSellerBusinessType" />
+          <ScalarProperty Name="ListingDetailsStartTime" ColumnName="ListingDetailsStartTime" />
+          <ScalarProperty Name="ListingDetailsTCROriginalItemID" ColumnName="ListingDetailsTCROriginalItemID" />
+          <ScalarProperty Name="ListingDetailsViewItemURL" ColumnName="ListingDetailsViewItemURL" />
+          <ScalarProperty Name="ListingDuration" ColumnName="ListingDuration" />
+          <ScalarProperty Name="ListingEnhancement" ColumnName="ListingEnhancement" />
+          <ScalarProperty Name="ListingSubtype2" ColumnName="ListingSubtype2" />
+          <ScalarProperty Name="ListingType" ColumnName="ListingType" />
+          <ScalarProperty Name="LocalListing" ColumnName="LocalListing" />
+          <ScalarProperty Name="LocationDefaulted" ColumnName="LocationDefaulted" />
+          <ScalarProperty Name="LotSize" ColumnName="LotSize" />
+          <ScalarProperty Name="MechanicalCheckAccepted" ColumnName="MechanicalCheckAccepted" />
+          <ScalarProperty Name="MotorsGermanySearchable" ColumnName="MotorsGermanySearchable" />
+          <ScalarProperty Name="NewLeadCount" ColumnName="NewLeadCount" />
+          <ScalarProperty Name="PartnerCode" ColumnName="PartnerCode" />
+          <ScalarProperty Name="PartnerName" ColumnName="PartnerName" />
+          <ScalarProperty Name="PaymentAllowedSite" ColumnName="PaymentAllowedSite" />
+          <ScalarProperty Name="PaymentDetailsDaysToFullPayment" ColumnName="PaymentDetailsDaysToFullPayment" />
+          <ScalarProperty Name="PaymentDetailsHoursToDeposit" ColumnName="PaymentDetailsHoursToDeposit" />
+          <ScalarProperty Name="PaymentMethods" ColumnName="PaymentMethods" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="PrivateNotes" ColumnName="PrivateNotes" />
+          <ScalarProperty Name="ProductListingDetails" ColumnName="ProductListingDetails" />
+          <ScalarProperty Name="ProxyItem" ColumnName="ProxyItem" />
+          <ScalarProperty Name="QuantityAvailable" ColumnName="QuantityAvailable" />
+          <ScalarProperty Name="QuantitySpecified" ColumnName="QuantitySpecified" />
+          <ScalarProperty Name="QuestionCount" ColumnName="QuestionCount" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="Relisted" ColumnName="Relisted" />
+          <ScalarProperty Name="RelistLink" ColumnName="RelistLink" />
+          <ScalarProperty Name="ReservePriceValue" ColumnName="ReservePriceValue" />
+          <ScalarProperty Name="ReservePricecurrencyID" ColumnName="ReservePricecurrencyID" />
+          <ScalarProperty Name="ReturnPolicyRefund" ColumnName="ReturnPolicyRefund" />
+          <ScalarProperty Name="ReturnPolicyRefundOption" ColumnName="ReturnPolicyRefundOption" />
+          <ScalarProperty Name="ReturnPolicyReturnsAccepted" ColumnName="ReturnPolicyReturnsAccepted" />
+          <ScalarProperty Name="ReturnPolicyReturnsWithin" ColumnName="ReturnPolicyReturnsWithin" />
+          <ScalarProperty Name="ReturnPolicyShippingCostPaidBy" ColumnName="ReturnPolicyShippingCostPaidBy" />
+          <ScalarProperty Name="ReturnPolicyWarrantyDuration" ColumnName="ReturnPolicyWarrantyDuration" />
+          <ScalarProperty Name="ReturnPolicyWarrantyOffered" ColumnName="ReturnPolicyWarrantyOffered" />
+          <ScalarProperty Name="ReturnPolicyWarrantyType" ColumnName="ReturnPolicyWarrantyType" />
+          <ScalarProperty Name="ScheduleTime" ColumnName="ScheduleTime" />
+          <ScalarProperty Name="SearchDetailsPicture" ColumnName="SearchDetailsPicture" />
+          <ScalarProperty Name="SearchDetailsRecentListing" ColumnName="SearchDetailsRecentListing" />
+          <ScalarProperty Name="SearchDetailsBuyItNowEnabled" ColumnName="SearchDetailsBuyItNowEnabled" />
+          <ScalarProperty Name="SellerAboutMePage" ColumnName="SellerAboutMePage" />
+          <ScalarProperty Name="SellerBillingEmail" ColumnName="SellerBillingEmail" />
+          <ScalarProperty Name="SellerCharityAffiliationsCharityID" ColumnName="SellerCharityAffiliationsCharityID" />
+          <ScalarProperty Name="SellereBayGoodStanding" ColumnName="SellereBayGoodStanding" />
+          <ScalarProperty Name="SellereBayWikiReadOnly" ColumnName="SellereBayWikiReadOnly" />
+          <ScalarProperty Name="SellerEIASToken" ColumnName="SellerEIASToken" />
+          <ScalarProperty Name="SellerEmail" ColumnName="SellerEmail" />
+          <ScalarProperty Name="SellerEnterpriseSeller" ColumnName="SellerEnterpriseSeller" />
+          <ScalarProperty Name="SellerFeedbackPrivate" ColumnName="SellerFeedbackPrivate" />
+          <ScalarProperty Name="SellerFeedbackRatingStar" ColumnName="SellerFeedbackRatingStar" />
+          <ScalarProperty Name="SellerFeedbackScore" ColumnName="SellerFeedbackScore" />
+          <ScalarProperty Name="SellerIDVerified" ColumnName="SellerIDVerified" />
+          <ScalarProperty Name="SellerMotorsDealer" ColumnName="SellerMotorsDealer" />
+          <ScalarProperty Name="SellerNewUser" ColumnName="SellerNewUser" />
+          <ScalarProperty Name="SellerPayPalAccountLevel" ColumnName="SellerPayPalAccountLevel" />
+          <ScalarProperty Name="SellerPayPalAccountStatus" ColumnName="SellerPayPalAccountStatus" />
+          <ScalarProperty Name="SellerPayPalAccountType" ColumnName="SellerPayPalAccountType" />
+          <ScalarProperty Name="SellerPositiveFeedbackPercent" ColumnName="SellerPositiveFeedbackPercent" />
+          <ScalarProperty Name="SellerQualifiesForSelling" ColumnName="SellerQualifiesForSelling" />
+          <ScalarProperty Name="SellerRegistrationAddress" ColumnName="SellerRegistrationAddress" />
+          <ScalarProperty Name="SellerRegistrationDate" ColumnName="SellerRegistrationDate" />
+          <ScalarProperty Name="SellerSellerPaymentMethod" ColumnName="SellerSellerPaymentMethod" />
+          <ScalarProperty Name="SellerTUVLevel" ColumnName="SellerTUVLevel" />
+          <ScalarProperty Name="SellerUniqueNegativeFeedbackCount" ColumnName="SellerUniqueNegativeFeedbackCount" />
+          <ScalarProperty Name="SellerUniqueNeutralFeedbackCount" ColumnName="SellerUniqueNeutralFeedbackCount" />
+          <ScalarProperty Name="SellerUniquePositiveFeedbackCount" ColumnName="SellerUniquePositiveFeedbackCount" />
+          <ScalarProperty Name="SellerUserAnonymized" ColumnName="SellerUserAnonymized" />
+          <ScalarProperty Name="SellerUserIDChanged" ColumnName="SellerUserIDChanged" />
+          <ScalarProperty Name="SellerUserSubscription" ColumnName="SellerUserSubscription" />
+          <ScalarProperty Name="SellerVATID" ColumnName="SellerVATID" />
+          <ScalarProperty Name="SellerVATStatus" ColumnName="SellerVATStatus" />
+          <ScalarProperty Name="SellerContactDetailsAddressID" ColumnName="SellerContactDetailsAddressID" />
+          <ScalarProperty Name="SellerContactDetailsAddressOwner" ColumnName="SellerContactDetailsAddressOwner" />
+          <ScalarProperty Name="SellerContactDetailsAddressRecordType" ColumnName="SellerContactDetailsAddressRecordType" />
+          <ScalarProperty Name="SellerContactDetailsAddressStatus" ColumnName="SellerContactDetailsAddressStatus" />
+          <ScalarProperty Name="SellerContactDetailsAddressUsage" ColumnName="SellerContactDetailsAddressUsage" />
+          <ScalarProperty Name="SellerContactDetailsCityName" ColumnName="SellerContactDetailsCityName" />
+          <ScalarProperty Name="SellerContactDetailsCompanyName" ColumnName="SellerContactDetailsCompanyName" />
+          <ScalarProperty Name="SellerContactDetailsCountry" ColumnName="SellerContactDetailsCountry" />
+          <ScalarProperty Name="SellerContactDetailsCountryName" ColumnName="SellerContactDetailsCountryName" />
+          <ScalarProperty Name="SellerContactDetailsCounty" ColumnName="SellerContactDetailsCounty" />
+          <ScalarProperty Name="SellerContactDetailsExternalAddressID" ColumnName="SellerContactDetailsExternalAddressID" />
+          <ScalarProperty Name="SellerContactDetailsFirstName" ColumnName="SellerContactDetailsFirstName" />
+          <ScalarProperty Name="SellerContactDetailsLastName" ColumnName="SellerContactDetailsLastName" />
+          <ScalarProperty Name="SellerContactDetailsName" ColumnName="SellerContactDetailsName" />
+          <ScalarProperty Name="SellerContactDetailsInternationalName" ColumnName="SellerContactDetailsInternationalName" />
+          <ScalarProperty Name="SellerContactDetailsInternationalStateAndCity" ColumnName="SellerContactDetailsInternationalStateAndCity" />
+          <ScalarProperty Name="SellerContactDetailsInternationalStreet" ColumnName="SellerContactDetailsInternationalStreet" />
+          <ScalarProperty Name="SellerContactDetailsPhone" ColumnName="SellerContactDetailsPhone" />
+          <ScalarProperty Name="SellerContactDetailsPhoneCountryCode" ColumnName="SellerContactDetailsPhoneCountryCode" />
+          <ScalarProperty Name="SellerContactDetailsPhoneCountryPrefix" ColumnName="SellerContactDetailsPhoneCountryPrefix" />
+          <ScalarProperty Name="SellerContactDetailsPhoneLocalNumber" ColumnName="SellerContactDetailsPhoneLocalNumber" />
+          <ScalarProperty Name="SellerContactDetailsPostalCode" ColumnName="SellerContactDetailsPostalCode" />
+          <ScalarProperty Name="SellerContactDetailsStateOrProvince" ColumnName="SellerContactDetailsStateOrProvince" />
+          <ScalarProperty Name="SellerContactDetailsStreet" ColumnName="SellerContactDetailsStreet" />
+          <ScalarProperty Name="SellerContactDetailsStreet1" ColumnName="SellerContactDetailsStreet1" />
+          <ScalarProperty Name="SellerContactDetailsStreet2" ColumnName="SellerContactDetailsStreet2" />
+          <ScalarProperty Name="SellerInventoryID" ColumnName="SellerInventoryID" />
+          <ScalarProperty Name="SellerVacationNote" ColumnName="SellerVacationNote" />
+          <ScalarProperty Name="SellingStatusAdminEnded" ColumnName="SellingStatusAdminEnded" />
+          <ScalarProperty Name="SellingStatusBidCount" ColumnName="SellingStatusBidCount" />
+          <ScalarProperty Name="SellingStatusBidderCount" ColumnName="SellingStatusBidderCount" />
+          <ScalarProperty Name="SellingStatusBidIncrementValue" ColumnName="SellingStatusBidIncrementValue" />
+          <ScalarProperty Name="SellingStatusBidIncrementcurrencyID" ColumnName="SellingStatusBidIncrementcurrencyID" />
+          <ScalarProperty Name="SellingStatusConvertedCurrentPriceValue" ColumnName="SellingStatusConvertedCurrentPriceValue" />
+          <ScalarProperty Name="SellingStatusCurrentPriceValue" ColumnName="SellingStatusCurrentPriceValue" />
+          <ScalarProperty Name="SellingStatusFinalValueFeeValue" ColumnName="SellingStatusFinalValueFeeValue" />
+          <ScalarProperty Name="SellingStatusLeadCount" ColumnName="SellingStatusLeadCount" />
+          <ScalarProperty Name="SellingStatusListingStatus" ColumnName="SellingStatusListingStatus" />
+          <ScalarProperty Name="SellingStatusMinimumToBid" ColumnName="SellingStatusMinimumToBid" />
+          <ScalarProperty Name="SellingStatusPromotionalSaleDetailsEndTime" ColumnName="SellingStatusPromotionalSaleDetailsEndTime" />
+          <ScalarProperty Name="SellingStatusQuantitySold" ColumnName="SellingStatusQuantitySold" />
+          <ScalarProperty Name="SellingStatusReserveMet" ColumnName="SellingStatusReserveMet" />
+          <ScalarProperty Name="SellingStatusSecondChanceEligible" ColumnName="SellingStatusSecondChanceEligible" />
+          <ScalarProperty Name="ShippingDetailsAllowPaymentEdit" ColumnName="ShippingDetailsAllowPaymentEdit" />
+          <ScalarProperty Name="ShippingDetailsApplyShippingDiscount" ColumnName="ShippingDetailsApplyShippingDiscount" />
+          <ScalarProperty Name="ShippingDetailsCalculatedShippingDiscountDiscountName" ColumnName="ShippingDetailsCalculatedShippingDiscountDiscountName" />
+          <ScalarProperty Name="ShippingDetailsCalculatedShippingDiscountDiscountProfile" ColumnName="ShippingDetailsCalculatedShippingDiscountDiscountProfile" />
+          <ScalarProperty Name="ShippingDetailsInsuranceFeeValue" ColumnName="ShippingDetailsInsuranceFeeValue" />
+          <ScalarProperty Name="ShipToLocations" ColumnName="ShipToLocations" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="SkypeEnabled" ColumnName="SkypeEnabled" />
+          <ScalarProperty Name="SkypeID" ColumnName="SkypeID" />
+          <ScalarProperty Name="StartPriceValue" ColumnName="StartPriceValue" />
+          <ScalarProperty Name="StartPricecurrencyID" ColumnName="StartPricecurrencyID" />
+          <ScalarProperty Name="StorefrontStoreName" ColumnName="StorefrontStoreName" />
+          <ScalarProperty Name="StorefrontStoreCategoryID" ColumnName="StorefrontStoreCategoryID" />
+          <ScalarProperty Name="StorefrontStoreCategory2ID" ColumnName="StorefrontStoreCategory2ID" />
+          <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+          <ScalarProperty Name="TaxCategory" ColumnName="TaxCategory" />
+          <ScalarProperty Name="ThirdPartyCheckout" ColumnName="ThirdPartyCheckout" />
+          <ScalarProperty Name="ThirdPartyCheckoutIntegration" ColumnName="ThirdPartyCheckoutIntegration" />
+          <ScalarProperty Name="TimeLeft" ColumnName="TimeLeft" />
+          <ScalarProperty Name="TotalQuestionCount" ColumnName="TotalQuestionCount" />
+          <ScalarProperty Name="UpdateReturnPolicy" ColumnName="UpdateReturnPolicy" />
+          <ScalarProperty Name="UpdateSellerInfo" ColumnName="UpdateSellerInfo" />
+          <ScalarProperty Name="UseTaxTable" ColumnName="UseTaxTable" />
+          <ScalarProperty Name="UUID" ColumnName="UUID" />
+          <ScalarProperty Name="Variations" ColumnName="Variations" />
+          <ScalarProperty Name="VATDetailsVATID" ColumnName="VATDetailsVATID" />
+          <ScalarProperty Name="WatchCount" ColumnName="WatchCount" />
+          <ScalarProperty Name="WatchCountSpecified" ColumnName="WatchCountSpecified" />
+          <ScalarProperty Name="ApplyBuyerProtectionBuyerProtectionSource" ColumnName="ApplyBuyerProtectionBuyerProtectionSource" />
+          <ScalarProperty Name="ApplyBuyerProtectionBuyerProtectionStatus" ColumnName="ApplyBuyerProtectionBuyerProtectionStatus" />
+          <ScalarProperty Name="ApplyShippingDiscount" ColumnName="ApplyShippingDiscount" />
+          <ScalarProperty Name="AutoPay" ColumnName="AutoPay" />
+          <ScalarProperty Name="BestOfferDetailsBestOffercurrencyID" ColumnName="BestOfferDetailsBestOffercurrencyID" />
+          <ScalarProperty Name="BestOfferDetailsBestOfferValue" ColumnName="BestOfferDetailsBestOfferValue" />
+          <ScalarProperty Name="BestOfferDetailsBestOfferStatus" ColumnName="BestOfferDetailsBestOfferStatus" />
+          <ScalarProperty Name="BestOfferDetailsBestOfferType" ColumnName="BestOfferDetailsBestOfferType" />
+          <ScalarProperty Name="BestOfferEnabled" ColumnName="BestOfferEnabled" />
+          <ScalarProperty Name="BiddingDetailsBidAssistant" ColumnName="BiddingDetailsBidAssistant" />
+          <ScalarProperty Name="BiddingDetailsConvertedMaxBidcurrencyID" ColumnName="BiddingDetailsConvertedMaxBidcurrencyID" />
+          <ScalarProperty Name="BiddingDetailsConvertedMaxBidValue" ColumnName="BiddingDetailsConvertedMaxBidValue" />
+          <ScalarProperty Name="BiddingDetailsMaxBidcurrencyID" ColumnName="BiddingDetailsMaxBidcurrencyID" />
+          <ScalarProperty Name="BiddingDetailsMaxBidValue" ColumnName="BiddingDetailsMaxBidValue" />
+          <ScalarProperty Name="BiddingDetailsQuantityBid" ColumnName="BiddingDetailsQuantityBid" />
+          <ScalarProperty Name="BiddingDetailsQuantityWon" ColumnName="BiddingDetailsQuantityWon" />
+          <ScalarProperty Name="BiddingDetailsWinning" ColumnName="BiddingDetailsWinning" />
+          <ScalarProperty Name="BidGroupItem" ColumnName="BidGroupItem" />
+          <ScalarProperty Name="ItemSpecific1" ColumnName="ItemSpecific1" />
+          <ScalarProperty Name="ItemSpecific2" ColumnName="ItemSpecific2" />
+          <ScalarProperty Name="ItemSpecific3" ColumnName="ItemSpecific3" />
+          <ScalarProperty Name="ItemSpecific4" ColumnName="ItemSpecific4" />
+          <ScalarProperty Name="ItemSpecific5" ColumnName="ItemSpecific5" />
+          <ScalarProperty Name="ItemSpecific6" ColumnName="ItemSpecific6" />
+          <ScalarProperty Name="ItemSpecific7" ColumnName="ItemSpecific7" />
+          <ScalarProperty Name="ItemSpecific8" ColumnName="ItemSpecific8" />
+          <ScalarProperty Name="ItemSpecific9" ColumnName="ItemSpecific9" />
+          <ScalarProperty Name="ItemSpecific10" ColumnName="ItemSpecific10" />
+          <ScalarProperty Name="ItemSpecific11" ColumnName="ItemSpecific11" />
+          <ScalarProperty Name="ItemSpecific12" ColumnName="ItemSpecific12" />
+          <ScalarProperty Name="ItemSpecific13" ColumnName="ItemSpecific13" />
+          <ScalarProperty Name="ItemSpecific14" ColumnName="ItemSpecific14" />
+          <ScalarProperty Name="ItemSpecific15" ColumnName="ItemSpecific15" />
+          <ScalarProperty Name="ItemSpecific16" ColumnName="ItemSpecific16" />
+          <ScalarProperty Name="ItemSpecific17" ColumnName="ItemSpecific17" />
+          <ScalarProperty Name="ItemSpecific18" ColumnName="ItemSpecific18" />
+          <ScalarProperty Name="ItemSpecific19" ColumnName="ItemSpecific19" />
+          <ScalarProperty Name="ItemSpecific20" ColumnName="ItemSpecific20" />
+          <ScalarProperty Name="ItemSpecific21" ColumnName="ItemSpecific21" />
+          <ScalarProperty Name="ItemSpecific22" ColumnName="ItemSpecific22" />
+          <ScalarProperty Name="ItemSpecific23" ColumnName="ItemSpecific23" />
+          <ScalarProperty Name="ItemSpecific24" ColumnName="ItemSpecific24" />
+          <ScalarProperty Name="ItemSpecific25" ColumnName="ItemSpecific25" />
+          <ScalarProperty Name="ItemSpecific26" ColumnName="ItemSpecific26" />
+          <ScalarProperty Name="ItemSpecific27" ColumnName="ItemSpecific27" />
+          <ScalarProperty Name="ItemSpecific28" ColumnName="ItemSpecific28" />
+          <ScalarProperty Name="ItemSpecific29" ColumnName="ItemSpecific29" />
+          <ScalarProperty Name="ItemSpecific30" ColumnName="ItemSpecific30" />
+          <ScalarProperty Name="ItemSpecific31" ColumnName="ItemSpecific31" />
+          <ScalarProperty Name="ItemSpecific32" ColumnName="ItemSpecific32" />
+          <ScalarProperty Name="ItemSpecific33" ColumnName="ItemSpecific33" />
+          <ScalarProperty Name="ItemSpecific34" ColumnName="ItemSpecific34" />
+          <ScalarProperty Name="ItemSpecific35" ColumnName="ItemSpecific35" />
+          <ScalarProperty Name="ItemSpecific36" ColumnName="ItemSpecific36" />
+          <ScalarProperty Name="ItemSpecific37" ColumnName="ItemSpecific37" />
+          <ScalarProperty Name="ItemSpecific38" ColumnName="ItemSpecific38" />
+          <ScalarProperty Name="ItemSpecific39" ColumnName="ItemSpecific39" />
+          <ScalarProperty Name="ItemSpecific40" ColumnName="ItemSpecific40" />
+          <ScalarProperty Name="ItemSpecific41" ColumnName="ItemSpecific41" />
+          <ScalarProperty Name="ItemSpecific42" ColumnName="ItemSpecific42" />
+          <ScalarProperty Name="ItemSpecific43" ColumnName="ItemSpecific43" />
+          <ScalarProperty Name="ItemSpecific44" ColumnName="ItemSpecific44" />
+          <ScalarProperty Name="ItemSpecific45" ColumnName="ItemSpecific45" />
+          <ScalarProperty Name="ItemSpecific46" ColumnName="ItemSpecific46" />
+          <ScalarProperty Name="ItemSpecific47" ColumnName="ItemSpecific47" />
+          <ScalarProperty Name="ItemSpecific48" ColumnName="ItemSpecific48" />
+          <ScalarProperty Name="ItemSpecific49" ColumnName="ItemSpecific49" />
+          <ScalarProperty Name="ItemSpecific50" ColumnName="ItemSpecific50" />
+          <ScalarProperty Name="ItemSpecific51" ColumnName="ItemSpecific51" />
+          <ScalarProperty Name="ItemSpecific52" ColumnName="ItemSpecific52" />
+          <ScalarProperty Name="ItemSpecific53" ColumnName="ItemSpecific53" />
+          <ScalarProperty Name="ItemSpecific54" ColumnName="ItemSpecific54" />
+          <ScalarProperty Name="ItemSpecific55" ColumnName="ItemSpecific55" />
+          <ScalarProperty Name="ItemSpecific56" ColumnName="ItemSpecific56" />
+          <ScalarProperty Name="ItemSpecific57" ColumnName="ItemSpecific57" />
+          <ScalarProperty Name="ItemSpecific58" ColumnName="ItemSpecific58" />
+          <ScalarProperty Name="ItemSpecific59" ColumnName="ItemSpecific59" />
+          <ScalarProperty Name="ItemSpecific60" ColumnName="ItemSpecific60" />
+          <ScalarProperty Name="ItemSpecific61" ColumnName="ItemSpecific61" />
+          <ScalarProperty Name="ItemSpecific62" ColumnName="ItemSpecific62" />
+          <ScalarProperty Name="ItemSpecific63" ColumnName="ItemSpecific63" />
+          <ScalarProperty Name="ItemSpecific64" ColumnName="ItemSpecific64" />
+          <ScalarProperty Name="ItemSpecific65" ColumnName="ItemSpecific65" />
+          <ScalarProperty Name="ItemSpecific66" ColumnName="ItemSpecific66" />
+          <ScalarProperty Name="ItemSpecific67" ColumnName="ItemSpecific67" />
+          <ScalarProperty Name="ItemSpecific68" ColumnName="ItemSpecific68" />
+          <ScalarProperty Name="ItemSpecific69" ColumnName="ItemSpecific69" />
+          <ScalarProperty Name="ItemSpecific70" ColumnName="ItemSpecific70" />
+          <ScalarProperty Name="ItemSpecific71" ColumnName="ItemSpecific71" />
+          <ScalarProperty Name="ItemSpecific72" ColumnName="ItemSpecific72" />
+          <ScalarProperty Name="ItemSpecific73" ColumnName="ItemSpecific73" />
+          <ScalarProperty Name="ItemSpecific74" ColumnName="ItemSpecific74" />
+          <ScalarProperty Name="ItemSpecific75" ColumnName="ItemSpecific75" />
+          <ScalarProperty Name="ItemSpecific76" ColumnName="ItemSpecific76" />
+          <ScalarProperty Name="ItemSpecific77" ColumnName="ItemSpecific77" />
+          <ScalarProperty Name="ItemSpecific78" ColumnName="ItemSpecific78" />
+          <ScalarProperty Name="ItemSpecific79" ColumnName="ItemSpecific79" />
+          <ScalarProperty Name="ItemSpecific80" ColumnName="ItemSpecific80" />
+          <ScalarProperty Name="ItemSpecific81" ColumnName="ItemSpecific81" />
+          <ScalarProperty Name="ItemSpecific82" ColumnName="ItemSpecific82" />
+          <ScalarProperty Name="ItemSpecific83" ColumnName="ItemSpecific83" />
+          <ScalarProperty Name="ItemSpecific84" ColumnName="ItemSpecific84" />
+          <ScalarProperty Name="ItemSpecific85" ColumnName="ItemSpecific85" />
+          <ScalarProperty Name="ItemSpecific86" ColumnName="ItemSpecific86" />
+          <ScalarProperty Name="ItemSpecific87" ColumnName="ItemSpecific87" />
+          <ScalarProperty Name="ItemSpecific88" ColumnName="ItemSpecific88" />
+          <ScalarProperty Name="ItemSpecific89" ColumnName="ItemSpecific89" />
+          <ScalarProperty Name="ItemSpecific90" ColumnName="ItemSpecific90" />
+          <ScalarProperty Name="ItemSpecific91" ColumnName="ItemSpecific91" />
+          <ScalarProperty Name="ItemSpecific92" ColumnName="ItemSpecific92" />
+          <ScalarProperty Name="ItemSpecific93" ColumnName="ItemSpecific93" />
+          <ScalarProperty Name="ItemSpecific94" ColumnName="ItemSpecific94" />
+          <ScalarProperty Name="ItemSpecific95" ColumnName="ItemSpecific95" />
+          <ScalarProperty Name="ItemSpecific96" ColumnName="ItemSpecific96" />
+          <ScalarProperty Name="ItemSpecific97" ColumnName="ItemSpecific97" />
+          <ScalarProperty Name="ItemSpecific98" ColumnName="ItemSpecific98" />
+          <ScalarProperty Name="ItemSpecific99" ColumnName="ItemSpecific99" />
+          <ScalarProperty Name="ItemSpecific100" ColumnName="ItemSpecific100" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="IsTypeOf(eBayFetchSQLModel.sysdiagram)">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="eBayFetchDataModel">
+        <EntityTypeShape EntityType="eBayFetchSQLModel.S1SearchTable" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5571907552083326" />
+        <EntityTypeShape EntityType="eBayFetchSQLModel.S2ItemInfo" Width="1.5" PointX="2.75" PointY="0.75" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="eBayFetchSQLModel.S3UserDetail" Width="1.5" PointX="4.75" PointY="0.75" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="eBayFetchSQLModel.S4PanelData" Width="1.5" PointX="0.75" PointY="5.75" Height="74.862529296875" />
+        <EntityTypeShape EntityType="eBayFetchSQLModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5.75" Height="1.9802864583333317" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

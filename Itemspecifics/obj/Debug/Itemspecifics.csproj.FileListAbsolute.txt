@@ -1,0 +1,8 @@
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Itemspecifics\bin\Debug\Itemspecifics.exe.config
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Itemspecifics\obj\Debug\Itemspecifics.csprojResolveAssemblyReference.cache
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Itemspecifics\bin\Debug\Itemspecifics.exe
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Itemspecifics\bin\Debug\Itemspecifics.pdb
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Itemspecifics\bin\Debug\eBay.Service.dll
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Itemspecifics\bin\Debug\eBay.Service.xml
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Itemspecifics\obj\Debug\Itemspecifics.exe
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Itemspecifics\obj\Debug\Itemspecifics.pdb

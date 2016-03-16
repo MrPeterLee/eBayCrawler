@@ -1,0 +1,1119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4694D7E-410D-44D8-99DB-EE6070F386EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eBayFetch</RootNamespace>
+    <AssemblyName>eBayFetch</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Dropbox\[Share]\[Share] Xiaogang\eBayFetch\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>3</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>true</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>eBay Fetch</ProductName>
+    <PublisherName>eBay Fetch Robot</PublisherName>
+    <WebPage>install.htm</WebPage>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>2.3.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>puzzle.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D4C4FC5D3DDEA987DFFC7E5FC7C00B38EEA38A94</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>eBayFetch_6_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="eBay.Service">
+      <HintPath>..\eBay SDK\eBay.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="eBay.Service.SDK.Attribute">
+      <HintPath>..\eBay SDK\eBay.Service.SDK.Attribute.dll</HintPath>
+    </Reference>
+    <Reference Include="eBay.Services">
+      <HintPath>..\eBay SDK\eBay Finding Kit v1.0\eBay.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSXML2">
+      <HintPath>..\eBay SDK\Interop.MSXML2.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Samples.Helper">
+      <HintPath>..\eBay SDK\Samples.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="SLF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\eBay SDK\eBay Finding Kit v1.0\SLF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RibbonControlsLibrary" />
+    <Reference Include="Microsoft.Windows.Shell" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ApiContext.cs" />
+    <Compile Include="DataGrid\S1Table.cs" />
+    <Compile Include="DataGrid\S2Table.cs" />
+    <Compile Include="DataGrid\S3Table.cs" />
+    <Compile Include="DataGrid\S4Table.cs" />
+    <Compile Include="DirAppend.cs" />
+    <Compile Include="eBayFetchSQLDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eBayFetchSQLDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FetchBidders.cs" />
+    <Compile Include="Splash Screen\DispatcherHelper.cs" />
+    <Compile Include="Splash Screen\MessageListener.cs" />
+    <Compile Include="Splash Screen\Splasher.cs" />
+    <Compile Include="Splash Screen\SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AutoFetch.cs" />
+    <Compile Include="CatetoryIDs.cs" />
+    <Compile Include="Debug.cs" />
+    <Compile Include="eBayFetchDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eBayFetchDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Export.cs" />
+    <Compile Include="FetchItem.cs" />
+    <Compile Include="FetchUser.cs" />
+    <Compile Include="ListingSearch.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Splash Screen\SplashScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\BubbleCreme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BureauBlack.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\BureauBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\DavesGlossyControls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ExpressionDark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ExpressionLight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\RainierOrange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\RainierPurple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\RainierRadialBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ShinyBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ShinyDarkGreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ShinyDarkPurple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ShinyDarkTeal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\ShinyRed.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\TwilightBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\UXMusingsBubblyBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\UXMusingsGreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\UXMusingsRed.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\UXMusingsRoughGreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\UXMusingsRoughRed.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\WhistlerBlue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="app.config" />
+    <EntityDeploy Include="eBayFetchDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>eBayFetchDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="eBayFetchSQLDataSet.xsc">
+      <DependentUpon>eBayFetchSQLDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eBayFetchSQLDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>eBayFetchSQLDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="eBayFetchSQLDataSet.xss">
+      <DependentUpon>eBayFetchSQLDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="eBayFetch_1_TemporaryKey.pfx" />
+    <None Include="eBayFetch_2_TemporaryKey.pfx" />
+    <None Include="eBayFetch_3_TemporaryKey.pfx" />
+    <None Include="eBayFetch_4_TemporaryKey.pfx" />
+    <None Include="eBayFetch_5_TemporaryKey.pfx" />
+    <None Include="eBayFetch_6_TemporaryKey.pfx" />
+    <None Include="eBayFetch_TemporaryKey.pfx" />
+    <None Include="Images\128x128\.DS_Store" />
+    <None Include="Images\128x128\Thumbs.db" />
+    <None Include="Images\16x16\Thumbs.db" />
+    <None Include="Images\24x24\.DS_Store" />
+    <None Include="Images\24x24\Thumbs.db" />
+    <None Include="Images\32x32\Thumbs.db" />
+    <None Include="Images\64x64\.DS_Store" />
+    <None Include="Images\64x64\Thumbs.db" />
+    <None Include="Properties\DataSources\eBayFetchSQLEntities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LargeIcon.png" />
+    <Resource Include="Images\SmallIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\network.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\network1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\movies.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\library.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Public.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Finder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Folder_Web.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\iChat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PNG-0891.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-0153.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-0197.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-0115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-0179.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-0222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-1333.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-1334.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-1335.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-1209.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-1165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-1364.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-1106.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Water Bottle.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-0014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\png-0061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="eBayFetchDataModel.edmx.sql" />
+    <Content Include="eBayFetchSQL.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="eBayFetchSQL_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>eBayFetchSQL.mdf</DependentUpon>
+    </Content>
+    <Resource Include="Images\ico\accept.ico" />
+    <Resource Include="Images\ico\add.ico" />
+    <Resource Include="Images\ico\apple.ico" />
+    <Resource Include="Images\ico\arrow_down.ico" />
+    <Resource Include="Images\ico\arrow_left.ico" />
+    <Resource Include="Images\ico\arrow_right.ico" />
+    <Resource Include="Images\ico\arrow_up.ico" />
+    <Resource Include="Images\ico\attachment.ico" />
+    <Resource Include="Images\ico\battery.ico" />
+    <Resource Include="Images\ico\battery_full.ico" />
+    <Resource Include="Images\ico\battery_low.ico" />
+    <Resource Include="Images\ico\briefcase.ico" />
+    <Resource Include="Images\ico\calculator.ico" />
+    <Resource Include="Images\ico\calendar_blank.ico" />
+    <Resource Include="Images\ico\calendar_full.ico" />
+    <Resource Include="Images\ico\chart.ico" />
+    <Resource Include="Images\ico\chart_pie.ico" />
+    <Resource Include="Images\ico\chess.ico" />
+    <Resource Include="Images\ico\clock.ico" />
+    <Resource Include="Images\ico\cloud_comment.ico" />
+    <Resource Include="Images\ico\coffee.ico" />
+    <Resource Include="Images\ico\comment.ico" />
+    <Resource Include="Images\ico\comments.ico" />
+    <Resource Include="Images\ico\computer.ico" />
+    <Resource Include="Images\ico\copy_page.ico" />
+    <Resource Include="Images\ico\cut.ico" />
+    <Resource Include="Images\ico\delete.ico" />
+    <Resource Include="Images\ico\dollar.ico" />
+    <Resource Include="Images\ico\edit.ico" />
+    <Resource Include="Images\ico\eject.ico" />
+    <Resource Include="Images\ico\email.ico" />
+    <Resource Include="Images\ico\euro.ico" />
+    <Resource Include="Images\ico\exclamation.ico" />
+    <Resource Include="Images\ico\fast_forward.ico" />
+    <Resource Include="Images\ico\favorite.ico" />
+    <Resource Include="Images\ico\flag.ico" />
+    <Resource Include="Images\ico\folder.ico" />
+    <Resource Include="Images\ico\games.ico" />
+    <Resource Include="Images\ico\heart.ico" />
+    <Resource Include="Images\ico\help.ico" />
+    <Resource Include="Images\ico\home.ico" />
+    <Resource Include="Images\ico\info.ico" />
+    <Resource Include="Images\ico\ipod.ico" />
+    <Resource Include="Images\ico\key.ico" />
+    <Resource Include="Images\ico\link.ico" />
+    <Resource Include="Images\ico\lock.ico" />
+    <Resource Include="Images\ico\mail.ico" />
+    <Resource Include="Images\ico\map.ico" />
+    <Resource Include="Images\ico\microphone.ico" />
+    <Resource Include="Images\ico\minus.ico" />
+    <Resource Include="Images\ico\mobile_phone.ico" />
+    <Resource Include="Images\ico\mouse.ico" />
+    <Resource Include="Images\ico\music_note.ico" />
+    <Resource Include="Images\ico\new.ico" />
+    <Resource Include="Images\ico\new_page.ico" />
+    <Resource Include="Images\ico\notebook.ico" />
+    <Resource Include="Images\ico\old_clock.ico" />
+    <Resource Include="Images\ico\old_phone.ico" />
+    <Resource Include="Images\ico\page.ico" />
+    <Resource Include="Images\ico\paint_brush.ico" />
+    <Resource Include="Images\ico\pause.ico" />
+    <Resource Include="Images\ico\phone.ico" />
+    <Resource Include="Images\ico\photo_camera.ico" />
+    <Resource Include="Images\ico\play.ico" />
+    <Resource Include="Images\ico\print.ico" />
+    <Resource Include="Images\ico\process.ico" />
+    <Resource Include="Images\ico\puzzle.ico" />
+    <Resource Include="Images\ico\record.ico" />
+    <Resource Include="Images\ico\refresh.ico" />
+    <Resource Include="Images\ico\remove.ico" />
+    <Resource Include="Images\ico\repeat.ico" />
+    <Resource Include="Images\ico\rewind.ico" />
+    <Resource Include="Images\ico\rss.ico" />
+    <Resource Include="Images\ico\save.ico" />
+    <Resource Include="Images\ico\search.ico" />
+    <Resource Include="Images\ico\security.ico" />
+    <Resource Include="Images\ico\shopping_cart.ico" />
+    <Resource Include="Images\ico\shut_down.ico" />
+    <Resource Include="Images\ico\skip_backward.ico" />
+    <Resource Include="Images\ico\skip_forward.ico" />
+    <Resource Include="Images\ico\sterling_pound.ico" />
+    <Resource Include="Images\ico\stop.ico" />
+    <Resource Include="Images\ico\target.ico" />
+    <Resource Include="Images\ico\television.ico" />
+    <Resource Include="Images\ico\tools.ico" />
+    <Resource Include="Images\ico\trash.ico" />
+    <Resource Include="Images\ico\umbrella.ico" />
+    <Resource Include="Images\ico\unlock.ico" />
+    <Resource Include="Images\ico\user.ico" />
+    <Resource Include="Images\ico\users.ico" />
+    <Resource Include="Images\ico\video_camera.ico" />
+    <Resource Include="Images\ico\volume_down.ico" />
+    <Resource Include="Images\ico\volume_up.ico" />
+    <Resource Include="Images\ico\warning.ico" />
+    <Resource Include="Images\ico\webcam.ico" />
+    <Resource Include="Images\ico\wired.ico" />
+    <Resource Include="Images\ico\wireless.ico" />
+    <Resource Include="Images\ico\yen.ico" />
+    <Resource Include="Images\ico\zoom_in.ico" />
+    <Resource Include="Images\ico\zoom_out.ico" />
+    <Resource Include="Images\128x128\comment.png" />
+    <Resource Include="Images\128x128\comments.png" />
+    <Resource Include="Images\128x128\computer.png" />
+    <Resource Include="Images\128x128\edit.png" />
+    <Resource Include="Images\128x128\folder.png" />
+    <Resource Include="Images\128x128\heart.png" />
+    <Resource Include="Images\128x128\link.png" />
+    <Resource Include="Images\128x128\mail.png" />
+    <Resource Include="Images\128x128\page.png" />
+    <Resource Include="Images\128x128\paint_brush.png" />
+    <Resource Include="Images\128x128\process.png" />
+    <Resource Include="Images\128x128\search.png" />
+    <Resource Include="Images\128x128\target.png" />
+    <Resource Include="Images\128x128\users.png" />
+    <Resource Include="Images\16x16\accept.png" />
+    <Resource Include="Images\16x16\add.png" />
+    <Resource Include="Images\16x16\apple.png" />
+    <Resource Include="Images\16x16\arrow_down.png" />
+    <Resource Include="Images\16x16\arrow_left.png" />
+    <Resource Include="Images\16x16\arrow_right.png" />
+    <Resource Include="Images\16x16\arrow_up.png" />
+    <Resource Include="Images\16x16\attachment.png" />
+    <Resource Include="Images\16x16\battery.png" />
+    <Resource Include="Images\16x16\battery_full.png" />
+    <Resource Include="Images\16x16\battery_low.png" />
+    <Resource Include="Images\16x16\briefcase.png" />
+    <Resource Include="Images\16x16\calculator.png" />
+    <Resource Include="Images\16x16\calendar_blank.png" />
+    <Resource Include="Images\16x16\calendar_full.png" />
+    <Resource Include="Images\16x16\chart.png" />
+    <Resource Include="Images\16x16\chart_pie.png" />
+    <Resource Include="Images\16x16\chess.png" />
+    <Resource Include="Images\16x16\clock.png" />
+    <Resource Include="Images\16x16\cloud_comment.png" />
+    <Resource Include="Images\16x16\coffee.png" />
+    <Resource Include="Images\16x16\comment.png" />
+    <Resource Include="Images\16x16\comments.png" />
+    <Resource Include="Images\16x16\computer.png" />
+    <Resource Include="Images\16x16\copy_page.png" />
+    <Resource Include="Images\16x16\cut.png" />
+    <Resource Include="Images\16x16\delete.png" />
+    <Resource Include="Images\16x16\dollar.png" />
+    <Resource Include="Images\16x16\edit.png" />
+    <Resource Include="Images\16x16\eject.png" />
+    <Resource Include="Images\16x16\email.png" />
+    <Resource Include="Images\16x16\euro.png" />
+    <Resource Include="Images\16x16\exclamation.png" />
+    <Resource Include="Images\16x16\fast_forward.png" />
+    <Resource Include="Images\16x16\favorite.png" />
+    <Resource Include="Images\16x16\flag.png" />
+    <Resource Include="Images\16x16\folder.png" />
+    <Resource Include="Images\16x16\games.png" />
+    <Resource Include="Images\16x16\heart.png" />
+    <Resource Include="Images\16x16\help.png" />
+    <Resource Include="Images\16x16\home.png" />
+    <Resource Include="Images\16x16\info.png" />
+    <Resource Include="Images\16x16\ipod.png" />
+    <Resource Include="Images\16x16\key.png" />
+    <Resource Include="Images\16x16\link.png" />
+    <Resource Include="Images\16x16\lock.png" />
+    <Resource Include="Images\16x16\mail.png" />
+    <Resource Include="Images\16x16\map.png" />
+    <Resource Include="Images\16x16\microphone.png" />
+    <Resource Include="Images\16x16\minus.png" />
+    <Resource Include="Images\16x16\mobile_phone.png" />
+    <Resource Include="Images\16x16\mouse.png" />
+    <Resource Include="Images\16x16\music_note.png" />
+    <Resource Include="Images\16x16\new.png" />
+    <Resource Include="Images\16x16\new_page.png" />
+    <Resource Include="Images\16x16\notebook.png" />
+    <Resource Include="Images\16x16\old_clock.png" />
+    <Resource Include="Images\16x16\old_phone.png" />
+    <Resource Include="Images\16x16\page.png" />
+    <Resource Include="Images\16x16\paint_brush.png" />
+    <Resource Include="Images\16x16\pause.png" />
+    <Resource Include="Images\16x16\phone.png" />
+    <Resource Include="Images\16x16\photo_camera.png" />
+    <Resource Include="Images\16x16\play.png" />
+    <Resource Include="Images\16x16\print.png" />
+    <Resource Include="Images\16x16\process.png" />
+    <Resource Include="Images\16x16\puzzle.png" />
+    <Resource Include="Images\16x16\record.png" />
+    <Resource Include="Images\16x16\refresh.png" />
+    <Resource Include="Images\16x16\remove.png" />
+    <Resource Include="Images\16x16\repeat.png" />
+    <Resource Include="Images\16x16\rewind.png" />
+    <Resource Include="Images\16x16\rss.png" />
+    <Resource Include="Images\16x16\save.png" />
+    <Resource Include="Images\16x16\search.png" />
+    <Resource Include="Images\16x16\security.png" />
+    <Resource Include="Images\16x16\shopping_cart.png" />
+    <Resource Include="Images\16x16\shut_down.png" />
+    <Resource Include="Images\16x16\skip_backward.png" />
+    <Resource Include="Images\16x16\skip_forward.png" />
+    <Resource Include="Images\16x16\sterling_pound.png" />
+    <Resource Include="Images\16x16\stop.png" />
+    <Resource Include="Images\16x16\target.png" />
+    <Resource Include="Images\16x16\television.png" />
+    <Resource Include="Images\16x16\tools.png" />
+    <Resource Include="Images\16x16\trash.png" />
+    <Resource Include="Images\16x16\umbrella.png" />
+    <Resource Include="Images\16x16\unlock.png" />
+    <Resource Include="Images\16x16\user.png" />
+    <Resource Include="Images\16x16\users.png" />
+    <Resource Include="Images\16x16\video_camera.png" />
+    <Resource Include="Images\16x16\volume_down.png" />
+    <Resource Include="Images\16x16\volume_up.png" />
+    <Resource Include="Images\16x16\warning.png" />
+    <Resource Include="Images\16x16\webcam.png" />
+    <Resource Include="Images\16x16\wired.png" />
+    <Resource Include="Images\16x16\wireless.png" />
+    <Resource Include="Images\16x16\yen.png" />
+    <Resource Include="Images\16x16\zoom_in.png" />
+    <Resource Include="Images\16x16\zoom_out.png" />
+    <Resource Include="Images\24x24\accept.png" />
+    <Resource Include="Images\24x24\add.png" />
+    <Resource Include="Images\24x24\apple.png" />
+    <Resource Include="Images\24x24\arrow_down.png" />
+    <Resource Include="Images\24x24\arrow_left.png" />
+    <Resource Include="Images\24x24\arrow_right.png" />
+    <Resource Include="Images\24x24\arrow_up.png" />
+    <Resource Include="Images\24x24\attachment.png" />
+    <Resource Include="Images\24x24\battery.png" />
+    <Resource Include="Images\24x24\battery_full.png" />
+    <Resource Include="Images\24x24\battery_low.png" />
+    <Resource Include="Images\24x24\briefcase.png" />
+    <Resource Include="Images\24x24\calculator.png" />
+    <Resource Include="Images\24x24\calendar_blank.png" />
+    <Resource Include="Images\24x24\calendar_full.png" />
+    <Resource Include="Images\24x24\chart.png" />
+    <Resource Include="Images\24x24\chart_pie.png" />
+    <Resource Include="Images\24x24\chess.png" />
+    <Resource Include="Images\24x24\clock.png" />
+    <Resource Include="Images\24x24\cloud_comment.png" />
+    <Resource Include="Images\24x24\coffee.png" />
+    <Resource Include="Images\24x24\comment.png" />
+    <Resource Include="Images\24x24\comments.png" />
+    <Resource Include="Images\24x24\computer.png" />
+    <Resource Include="Images\24x24\copy_page.png" />
+    <Resource Include="Images\24x24\cut.png" />
+    <Resource Include="Images\24x24\delete.png" />
+    <Resource Include="Images\24x24\dollar.png" />
+    <Resource Include="Images\24x24\edit.png" />
+    <Resource Include="Images\24x24\eject.png" />
+    <Resource Include="Images\24x24\email.png" />
+    <Resource Include="Images\24x24\euro.png" />
+    <Resource Include="Images\24x24\exclamation.png" />
+    <Resource Include="Images\24x24\fast_forward.png" />
+    <Resource Include="Images\24x24\favorite.png" />
+    <Resource Include="Images\24x24\flag.png" />
+    <Resource Include="Images\24x24\folder.png" />
+    <Resource Include="Images\24x24\games.png" />
+    <Resource Include="Images\24x24\heart.png" />
+    <Resource Include="Images\24x24\help.png" />
+    <Resource Include="Images\24x24\home.png" />
+    <Resource Include="Images\24x24\info.png" />
+    <Resource Include="Images\24x24\ipod.png" />
+    <Resource Include="Images\24x24\key.png" />
+    <Resource Include="Images\24x24\link.png" />
+    <Resource Include="Images\24x24\lock.png" />
+    <Resource Include="Images\24x24\mail.png" />
+    <Resource Include="Images\24x24\map.png" />
+    <Resource Include="Images\24x24\microphone.png" />
+    <Resource Include="Images\24x24\minus.png" />
+    <Resource Include="Images\24x24\mobile_phone.png" />
+    <Resource Include="Images\24x24\mouse.png" />
+    <Resource Include="Images\24x24\music_note.png" />
+    <Resource Include="Images\24x24\new.png" />
+    <Resource Include="Images\24x24\new_page.png" />
+    <Resource Include="Images\24x24\notebook.png" />
+    <Resource Include="Images\24x24\old_clock.png" />
+    <Resource Include="Images\24x24\old_phone.png" />
+    <Resource Include="Images\24x24\page.png" />
+    <Resource Include="Images\24x24\paint_brush.png" />
+    <Resource Include="Images\24x24\pause.png" />
+    <Resource Include="Images\24x24\phone.png" />
+    <Resource Include="Images\24x24\photo_camera.png" />
+    <Resource Include="Images\24x24\play.png" />
+    <Resource Include="Images\24x24\print.png" />
+    <Resource Include="Images\24x24\process.png" />
+    <Resource Include="Images\24x24\puzzle.png" />
+    <Resource Include="Images\24x24\record.png" />
+    <Resource Include="Images\24x24\refresh.png" />
+    <Resource Include="Images\24x24\remove.png" />
+    <Resource Include="Images\24x24\repeat.png" />
+    <Resource Include="Images\24x24\rewind.png" />
+    <Resource Include="Images\24x24\rss.png" />
+    <Resource Include="Images\24x24\save.png" />
+    <Resource Include="Images\24x24\search.png" />
+    <Resource Include="Images\24x24\security.png" />
+    <Resource Include="Images\24x24\shopping_cart.png" />
+    <Resource Include="Images\24x24\shut_down.png" />
+    <Resource Include="Images\24x24\skip_backward.png" />
+    <Resource Include="Images\24x24\skip_forward.png" />
+    <Resource Include="Images\24x24\sterling_pound.png" />
+    <Resource Include="Images\24x24\stop.png" />
+    <Resource Include="Images\24x24\target.png" />
+    <Resource Include="Images\24x24\television.png" />
+    <Resource Include="Images\24x24\tools.png" />
+    <Resource Include="Images\24x24\trash.png" />
+    <Resource Include="Images\24x24\umbrella.png" />
+    <Resource Include="Images\24x24\unlock.png" />
+    <Resource Include="Images\24x24\user.png" />
+    <Resource Include="Images\24x24\users.png" />
+    <Resource Include="Images\24x24\video_camera.png" />
+    <Resource Include="Images\24x24\volume_down.png" />
+    <Resource Include="Images\24x24\volume_up.png" />
+    <Resource Include="Images\24x24\warning.png" />
+    <Resource Include="Images\24x24\webcam.png" />
+    <Resource Include="Images\24x24\wired.png" />
+    <Resource Include="Images\24x24\wireless.png" />
+    <Resource Include="Images\24x24\yen.png" />
+    <Resource Include="Images\24x24\zoom_in.png" />
+    <Resource Include="Images\24x24\zoom_out.png" />
+    <Resource Include="Images\32x32\accept.png" />
+    <Resource Include="Images\32x32\add.png" />
+    <Resource Include="Images\32x32\apple.png" />
+    <Resource Include="Images\32x32\arrow_down.png" />
+    <Resource Include="Images\32x32\arrow_left.png" />
+    <Resource Include="Images\32x32\arrow_right.png" />
+    <Resource Include="Images\32x32\arrow_up.png" />
+    <Resource Include="Images\32x32\attachment.png" />
+    <Resource Include="Images\32x32\battery.png" />
+    <Resource Include="Images\32x32\battery_full.png" />
+    <Resource Include="Images\32x32\battery_low.png" />
+    <Resource Include="Images\32x32\briefcase.png" />
+    <Resource Include="Images\32x32\calculator.png" />
+    <Resource Include="Images\32x32\calendar_blank.png" />
+    <Resource Include="Images\32x32\calendar_full.png" />
+    <Resource Include="Images\32x32\chart.png" />
+    <Resource Include="Images\32x32\chart_pie.png" />
+    <Resource Include="Images\32x32\chess.png" />
+    <Resource Include="Images\32x32\clock.png" />
+    <Resource Include="Images\32x32\cloud_comment.png" />
+    <Resource Include="Images\32x32\coffee.png" />
+    <Resource Include="Images\32x32\comment.png" />
+    <Resource Include="Images\32x32\comments.png" />
+    <Resource Include="Images\32x32\computer.png" />
+    <Resource Include="Images\32x32\copy_page.png" />
+    <Resource Include="Images\32x32\cut.png" />
+    <Resource Include="Images\32x32\delete.png" />
+    <Resource Include="Images\32x32\dollar.png" />
+    <Resource Include="Images\32x32\edit.png" />
+    <Resource Include="Images\32x32\eject.png" />
+    <Resource Include="Images\32x32\email.png" />
+    <Resource Include="Images\32x32\euro.png" />
+    <Resource Include="Images\32x32\exclamation.png" />
+    <Resource Include="Images\32x32\fast_forward.png" />
+    <Resource Include="Images\32x32\favorite.png" />
+    <Resource Include="Images\32x32\flag.png" />
+    <Resource Include="Images\32x32\folder.png" />
+    <Resource Include="Images\32x32\games.png" />
+    <Resource Include="Images\32x32\heart.png" />
+    <Resource Include="Images\32x32\help.png" />
+    <Resource Include="Images\32x32\home.png" />
+    <Resource Include="Images\32x32\info.png" />
+    <Resource Include="Images\32x32\ipod.png" />
+    <Resource Include="Images\32x32\key.png" />
+    <Resource Include="Images\32x32\link.png" />
+    <Resource Include="Images\32x32\lock.png" />
+    <Resource Include="Images\32x32\mail.png" />
+    <Resource Include="Images\32x32\map.png" />
+    <Resource Include="Images\32x32\microphone.png" />
+    <Resource Include="Images\32x32\minus.png" />
+    <Resource Include="Images\32x32\mobile_phone.png" />
+    <Resource Include="Images\32x32\mouse.png" />
+    <Resource Include="Images\32x32\music_note.png" />
+    <Resource Include="Images\32x32\new.png" />
+    <Resource Include="Images\32x32\new_page.png" />
+    <Resource Include="Images\32x32\notebook.png" />
+    <Resource Include="Images\32x32\old_clock.png" />
+    <Resource Include="Images\32x32\old_phone.png" />
+    <Resource Include="Images\32x32\page.png" />
+    <Resource Include="Images\32x32\paint_brush.png" />
+    <Resource Include="Images\32x32\pause.png" />
+    <Resource Include="Images\32x32\phone.png" />
+    <Resource Include="Images\32x32\photo_camera.png" />
+    <Resource Include="Images\32x32\play.png" />
+    <Resource Include="Images\32x32\print.png" />
+    <Resource Include="Images\32x32\process.png" />
+    <Resource Include="Images\32x32\puzzle.png" />
+    <Resource Include="Images\32x32\record.png" />
+    <Resource Include="Images\32x32\refresh.png" />
+    <Resource Include="Images\32x32\remove.png" />
+    <Resource Include="Images\32x32\repeat.png" />
+    <Resource Include="Images\32x32\rewind.png" />
+    <Resource Include="Images\32x32\rss.png" />
+    <Resource Include="Images\32x32\save.png" />
+    <Resource Include="Images\32x32\search.png" />
+    <Resource Include="Images\32x32\security.png" />
+    <Resource Include="Images\32x32\shopping_cart.png" />
+    <Resource Include="Images\32x32\shut_down.png" />
+    <Resource Include="Images\32x32\skip_backward.png" />
+    <Resource Include="Images\32x32\skip_forward.png" />
+    <Resource Include="Images\32x32\sterling_pound.png" />
+    <Resource Include="Images\32x32\stop.png" />
+    <Resource Include="Images\32x32\target.png" />
+    <Resource Include="Images\32x32\television.png" />
+    <Resource Include="Images\32x32\tools.png" />
+    <Resource Include="Images\32x32\trash.png" />
+    <Resource Include="Images\32x32\umbrella.png" />
+    <Resource Include="Images\32x32\unlock.png" />
+    <Resource Include="Images\32x32\user.png" />
+    <Resource Include="Images\32x32\users.png" />
+    <Resource Include="Images\32x32\video_camera.png" />
+    <Resource Include="Images\32x32\volume_down.png" />
+    <Resource Include="Images\32x32\volume_up.png" />
+    <Resource Include="Images\32x32\warning.png" />
+    <Resource Include="Images\32x32\webcam.png" />
+    <Resource Include="Images\32x32\wired.png" />
+    <Resource Include="Images\32x32\wireless.png" />
+    <Resource Include="Images\32x32\yen.png" />
+    <Resource Include="Images\32x32\zoom_in.png" />
+    <Resource Include="Images\32x32\zoom_out.png" />
+    <Resource Include="Images\64x64\accept.png" />
+    <Resource Include="Images\64x64\add.png" />
+    <Resource Include="Images\64x64\apple.png" />
+    <Resource Include="Images\64x64\arrow_down.png" />
+    <Resource Include="Images\64x64\arrow_left.png" />
+    <Resource Include="Images\64x64\arrow_right.png" />
+    <Resource Include="Images\64x64\arrow_up.png" />
+    <Resource Include="Images\64x64\attachment.png" />
+    <Resource Include="Images\64x64\battery.png" />
+    <Resource Include="Images\64x64\battery_full.png" />
+    <Resource Include="Images\64x64\battery_low.png" />
+    <Resource Include="Images\64x64\briefcase.png" />
+    <Resource Include="Images\64x64\calculator.png" />
+    <Resource Include="Images\64x64\calendar_blank.png" />
+    <Resource Include="Images\64x64\calendar_full.png" />
+    <Resource Include="Images\64x64\chart.png" />
+    <Resource Include="Images\64x64\chart_pie.png" />
+    <Resource Include="Images\64x64\chess.png" />
+    <Resource Include="Images\64x64\clock.png" />
+    <Resource Include="Images\64x64\cloud_comment.png" />
+    <Resource Include="Images\64x64\coffee.png" />
+    <Resource Include="Images\64x64\comment.png" />
+    <Resource Include="Images\64x64\comments.png" />
+    <Resource Include="Images\64x64\computer.png" />
+    <Resource Include="Images\64x64\copy_page.png" />
+    <Resource Include="Images\64x64\cut.png" />
+    <Resource Include="Images\64x64\delete.png" />
+    <Resource Include="Images\64x64\dollar.png" />
+    <Resource Include="Images\64x64\edit.png" />
+    <Resource Include="Images\64x64\eject.png" />
+    <Resource Include="Images\64x64\email.png" />
+    <Resource Include="Images\64x64\euro.png" />
+    <Resource Include="Images\64x64\exclamation.png" />
+    <Resource Include="Images\64x64\fast_forward.png" />
+    <Resource Include="Images\64x64\favorite.png" />
+    <Resource Include="Images\64x64\flag.png" />
+    <Resource Include="Images\64x64\folder.png" />
+    <Resource Include="Images\64x64\games.png" />
+    <Resource Include="Images\64x64\heart.png" />
+    <Resource Include="Images\64x64\help.png" />
+    <Resource Include="Images\64x64\home.png" />
+    <Resource Include="Images\64x64\info.png" />
+    <Resource Include="Images\64x64\ipod.png" />
+    <Resource Include="Images\64x64\key.png" />
+    <Resource Include="Images\64x64\link.png" />
+    <Resource Include="Images\64x64\lock.png" />
+    <Resource Include="Images\64x64\mail.png" />
+    <Resource Include="Images\64x64\map.png" />
+    <Resource Include="Images\64x64\microphone.png" />
+    <Resource Include="Images\64x64\minus.png" />
+    <Resource Include="Images\64x64\mobile_phone.png" />
+    <Resource Include="Images\64x64\mouse.png" />
+    <Resource Include="Images\64x64\music_note.png" />
+    <Resource Include="Images\64x64\new.png" />
+    <Resource Include="Images\64x64\new_page.png" />
+    <Resource Include="Images\64x64\notebook.png" />
+    <Resource Include="Images\64x64\old_clock.png" />
+    <Resource Include="Images\64x64\old_phone.png" />
+    <Resource Include="Images\64x64\page.png" />
+    <Resource Include="Images\64x64\paint_brush.png" />
+    <Resource Include="Images\64x64\pause.png" />
+    <Resource Include="Images\64x64\phone.png" />
+    <Resource Include="Images\64x64\photo_camera.png" />
+    <Resource Include="Images\64x64\play.png" />
+    <Resource Include="Images\64x64\print.png" />
+    <Resource Include="Images\64x64\process.png" />
+    <Resource Include="Images\64x64\puzzle.png" />
+    <Resource Include="Images\64x64\record.png" />
+    <Resource Include="Images\64x64\refresh.png" />
+    <Resource Include="Images\64x64\remove.png" />
+    <Resource Include="Images\64x64\repeat.png" />
+    <Resource Include="Images\64x64\rewind.png" />
+    <Resource Include="Images\64x64\rss.png" />
+    <Resource Include="Images\64x64\save.png" />
+    <Resource Include="Images\64x64\search.png" />
+    <Resource Include="Images\64x64\security.png" />
+    <Resource Include="Images\64x64\shopping_cart.png" />
+    <Resource Include="Images\64x64\shut_down.png" />
+    <Resource Include="Images\64x64\skip_backward.png" />
+    <Resource Include="Images\64x64\skip_forward.png" />
+    <Resource Include="Images\64x64\sterling_pound.png" />
+    <Resource Include="Images\64x64\stop.png" />
+    <Resource Include="Images\64x64\target.png" />
+    <Resource Include="Images\64x64\television.png" />
+    <Resource Include="Images\64x64\tools.png" />
+    <Resource Include="Images\64x64\trash.png" />
+    <Resource Include="Images\64x64\umbrella.png" />
+    <Resource Include="Images\64x64\unlock.png" />
+    <Resource Include="Images\64x64\user.png" />
+    <Resource Include="Images\64x64\users.png" />
+    <Resource Include="Images\64x64\video_camera.png" />
+    <Resource Include="Images\64x64\volume_down.png" />
+    <Resource Include="Images\64x64\volume_up.png" />
+    <Resource Include="Images\64x64\warning.png" />
+    <Resource Include="Images\64x64\webcam.png" />
+    <Resource Include="Images\64x64\wired.png" />
+    <Resource Include="Images\64x64\wireless.png" />
+    <Resource Include="Images\64x64\yen.png" />
+    <Resource Include="Images\64x64\zoom_in.png" />
+    <Resource Include="Images\64x64\zoom_out.png" />
+    <Resource Include="Images\128x128\accept.png" />
+    <Resource Include="Images\128x128\add.png" />
+    <Resource Include="Images\128x128\apple.png" />
+    <Resource Include="Images\128x128\arrow_down.png" />
+    <Resource Include="Images\128x128\arrow_left.png" />
+    <Resource Include="Images\128x128\arrow_right.png" />
+    <Resource Include="Images\128x128\arrow_up.png" />
+    <Resource Include="Images\128x128\attachment.png" />
+    <Resource Include="Images\128x128\battery.png" />
+    <Resource Include="Images\128x128\battery_full.png" />
+    <Resource Include="Images\128x128\battery_low.png" />
+    <Resource Include="Images\128x128\briefcase.png" />
+    <Resource Include="Images\128x128\calculator.png" />
+    <Resource Include="Images\128x128\calendar_blank.png" />
+    <Resource Include="Images\128x128\calendar_full.png" />
+    <Resource Include="Images\128x128\chart.png" />
+    <Resource Include="Images\128x128\chart_pie.png" />
+    <Resource Include="Images\128x128\chess.png" />
+    <Resource Include="Images\128x128\clock.png" />
+    <Resource Include="Images\128x128\cloud_comment.png" />
+    <Resource Include="Images\128x128\coffee.png" />
+    <Resource Include="Images\128x128\copy_page.png" />
+    <Resource Include="Images\128x128\cut.png" />
+    <Resource Include="Images\128x128\delete.png" />
+    <Resource Include="Images\128x128\dollar.png" />
+    <Resource Include="Images\128x128\eject.png" />
+    <Resource Include="Images\128x128\email.png" />
+    <Resource Include="Images\128x128\euro.png" />
+    <Resource Include="Images\128x128\exclamation.png" />
+    <Resource Include="Images\128x128\fast_forward.png" />
+    <Resource Include="Images\128x128\favorite.png" />
+    <Resource Include="Images\128x128\flag.png" />
+    <Resource Include="Images\128x128\games.png" />
+    <Resource Include="Images\128x128\help.png" />
+    <Resource Include="Images\128x128\home.png" />
+    <Resource Include="Images\128x128\info.png" />
+    <Resource Include="Images\128x128\ipod.png" />
+    <Resource Include="Images\128x128\key.png" />
+    <Resource Include="Images\128x128\lock.png" />
+    <Resource Include="Images\128x128\map.png" />
+    <Resource Include="Images\128x128\microphone.png" />
+    <Resource Include="Images\128x128\minus.png" />
+    <Resource Include="Images\128x128\mobile_phone.png" />
+    <Resource Include="Images\128x128\mouse.png" />
+    <Resource Include="Images\128x128\music_note.png" />
+    <Resource Include="Images\128x128\new.png" />
+    <Resource Include="Images\128x128\new_page.png" />
+    <Resource Include="Images\128x128\notebook.png" />
+    <Resource Include="Images\128x128\old_clock.png" />
+    <Resource Include="Images\128x128\old_phone.png" />
+    <Resource Include="Images\128x128\pause.png" />
+    <Resource Include="Images\128x128\phone.png" />
+    <Resource Include="Images\128x128\photo_camera.png" />
+    <Resource Include="Images\128x128\play.png" />
+    <Resource Include="Images\128x128\print.png" />
+    <Resource Include="Images\128x128\puzzle.png" />
+    <Resource Include="Images\128x128\record.png" />
+    <Resource Include="Images\128x128\refresh.png" />
+    <Resource Include="Images\128x128\remove.png" />
+    <Resource Include="Images\128x128\repeat.png" />
+    <Resource Include="Images\128x128\rewind.png" />
+    <Resource Include="Images\128x128\rss.png" />
+    <Resource Include="Images\128x128\save.png" />
+    <Resource Include="Images\128x128\security.png" />
+    <Resource Include="Images\128x128\shopping_cart.png" />
+    <Resource Include="Images\128x128\shut_down.png" />
+    <Resource Include="Images\128x128\skip_backward.png" />
+    <Resource Include="Images\128x128\skip_forward.png" />
+    <Resource Include="Images\128x128\sterling_pound.png" />
+    <Resource Include="Images\128x128\stop.png" />
+    <Resource Include="Images\128x128\television.png" />
+    <Resource Include="Images\128x128\tools.png" />
+    <Resource Include="Images\128x128\trash.png" />
+    <Resource Include="Images\128x128\umbrella.png" />
+    <Resource Include="Images\128x128\unlock.png" />
+    <Resource Include="Images\128x128\user.png" />
+    <Resource Include="Images\128x128\video_camera.png" />
+    <Resource Include="Images\128x128\volume_down.png" />
+    <Resource Include="Images\128x128\volume_up.png" />
+    <Resource Include="Images\128x128\warning.png" />
+    <Resource Include="Images\128x128\webcam.png" />
+    <Resource Include="Images\128x128\wired.png" />
+    <Resource Include="Images\128x128\wireless.png" />
+    <Resource Include="Images\128x128\yen.png" />
+    <Resource Include="Images\128x128\zoom_in.png" />
+    <Resource Include="Images\128x128\zoom_out.png" />
+    <Resource Include="puzzle.ico" />
+    <Resource Include="Images\Icons\ico\back.ico" />
+    <Resource Include="Images\Icons\ico\barcode.ico" />
+    <Resource Include="Images\Icons\ico\blank_page.ico" />
+    <Resource Include="Images\Icons\ico\block.ico" />
+    <Resource Include="Images\Icons\ico\book.ico" />
+    <Resource Include="Images\Icons\ico\check_mark.ico" />
+    <Resource Include="Images\Icons\ico\cloud.ico" />
+    <Resource Include="Images\Icons\ico\cloud_download.ico" />
+    <Resource Include="Images\Icons\ico\cloud_upload.ico" />
+    <Resource Include="Images\Icons\ico\comment.ico" />
+    <Resource Include="Images\Icons\ico\comments.ico" />
+    <Resource Include="Images\Icons\ico\computer.ico" />
+    <Resource Include="Images\Icons\ico\credit_card.ico" />
+    <Resource Include="Images\Icons\ico\down.ico" />
+    <Resource Include="Images\Icons\ico\drop.ico" />
+    <Resource Include="Images\Icons\ico\edit.ico" />
+    <Resource Include="Images\Icons\ico\edit_page.ico" />
+    <Resource Include="Images\Icons\ico\eye.ico" />
+    <Resource Include="Images\Icons\ico\female_user.ico" />
+    <Resource Include="Images\Icons\ico\film.ico" />
+    <Resource Include="Images\Icons\ico\folder.ico" />
+    <Resource Include="Images\Icons\ico\folder_download.ico" />
+    <Resource Include="Images\Icons\ico\folder_upload.ico" />
+    <Resource Include="Images\Icons\ico\fullscreen.ico" />
+    <Resource Include="Images\Icons\ico\grid.ico" />
+    <Resource Include="Images\Icons\ico\heart.ico" />
+    <Resource Include="Images\Icons\ico\id_card.ico" />
+    <Resource Include="Images\Icons\ico\image.ico" />
+    <Resource Include="Images\Icons\ico\link.ico" />
+    <Resource Include="Images\Icons\ico\list.ico" />
+    <Resource Include="Images\Icons\ico\mail.ico" />
+    <Resource Include="Images\Icons\ico\male_user.ico" />
+    <Resource Include="Images\Icons\ico\map_pin.ico" />
+    <Resource Include="Images\Icons\ico\news.ico" />
+    <Resource Include="Images\Icons\ico\next.ico" />
+    <Resource Include="Images\Icons\ico\page.ico" />
+    <Resource Include="Images\Icons\ico\page_download.ico" />
+    <Resource Include="Images\Icons\ico\page_upload.ico" />
+    <Resource Include="Images\Icons\ico\paint_brush.ico" />
+    <Resource Include="Images\Icons\ico\process.ico" />
+    <Resource Include="Images\Icons\ico\quote.ico" />
+    <Resource Include="Images\Icons\ico\search.ico" />
+    <Resource Include="Images\Icons\ico\settings.ico" />
+    <Resource Include="Images\Icons\ico\smart_phone.ico" />
+    <Resource Include="Images\Icons\ico\star.ico" />
+    <Resource Include="Images\Icons\ico\tablet.ico" />
+    <Resource Include="Images\Icons\ico\tag.ico" />
+    <Resource Include="Images\Icons\ico\target.ico" />
+    <Resource Include="Images\Icons\ico\up.ico" />
+    <Resource Include="Images\Icons\ico\users.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

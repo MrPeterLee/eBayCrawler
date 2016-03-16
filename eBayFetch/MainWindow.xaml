@@ -1,0 +1,437 @@
+﻿<Window x:Class="eBayFetch.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+		Title="eBay Auto Fetch Robot 2014 - by Stupid Peter and Smart Che"
+		x:Name="RibbonWindow" 
+		Icon="/eBayFetch;component/Images/ico/puzzle.ico" WindowStartupLocation="CenterScreen" Loaded="RibbonWindow_Loaded" FontSize="11"  >
+
+    <Grid x:Name="LayoutRoot"         Margin = "0,-22,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ribbon:Ribbon x:Name="Ribbon" Grid.Row="0" Background="{x:Null}"  >
+            <ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonApplicationMenu 
+                    SmallImageSource="/eBayFetch;component/Images/32x32/puzzle.png" 
+                    Name="RibbonMenu" Visibility="Collapsed">
+                    <ribbon:RibbonApplicationMenuItem Header="Save"
+													  x:Name="SaveSettings"
+													  ImageSource="/eBayFetch;component/Images/32x32/dollar.png" 
+                                                      Visibility="Hidden"/>
+                    <ribbon:RibbonApplicationMenuItem Header="Exit"
+													  x:Name="Exit"
+													  ImageSource="/eBayFetch;component/Images/32x32/dollar.png" 
+                                                      Click="Exit_Click" Visibility="Hidden" />
+                </ribbon:RibbonApplicationMenu>
+            </ribbon:Ribbon.ApplicationMenu>
+
+            <ribbon:RibbonTab x:Name="AutoFetch" 
+							  Header="Auto Fetch">
+                <ribbon:RibbonGroup x:Name="TabAF" 
+									Header="Auto Fetch">
+                    <ribbon:RibbonButton x:Name="BtnAutoFetch"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/refresh.png"
+										 Label="Start Auto Fetch" Click="BtnAutoFetch_Click" />
+                    <ribbon:RibbonButton x:Name="BtnStopAutoFetch"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/remove.png"
+										 Label="Stop Auto Fetch" Click="BtnStopCategorySearch_Click" Visibility="Collapsed" />
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="AccRibbon" 
+									Header="eBay Auto Fetch">
+                    <ribbon:RibbonButton x:Name="BtnStage1"
+										 SmallImageSource="/eBayFetch;component/Images/32x32/battery_low.png"
+										 Label="Stage1: Search Category IDs" Click="BtnStage1_Click" />
+                    <ribbon:RibbonButton x:Name="BtnStage2"
+										 SmallImageSource="/eBayFetch;component/Images/32x32/battery.png"
+										 Label="Stage2: Fetch Search Listings" Click="BtnStage2_Click" />
+                    <ribbon:RibbonButton x:Name="BtnStage3"
+										 SmallImageSource="/eBayFetch;component/Images/32x32/battery_full.png"
+										 Label="Stage3: Fetch Ended Listings " Click="BtnStage3_Click" />
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="MultiSearchGrp"
+									Header="Which categories would you like to fetch?">
+                    <ribbon:RibbonCheckBox x:Name="ChkAllCars"
+											   Label="Cars and Trucks (707)" IsChecked="True" />
+                    <ribbon:RibbonCheckBox x:Name="ChkAllRealEst"
+											   Label="Real Estates (6)" />
+                    <ribbon:RibbonCheckBox x:Name="ChkAllApples"
+											   Label="iMac iPad iPod iPhone (5)" />
+                    <ribbon:RibbonCheckBox x:Name="ChkMotorBikes"
+											   Label="Motor Bikes (138)" />
+                    <ribbon:RibbonCheckBox x:Name="ChkSoftwares"
+											   Label="Softwares (160)" />
+                    <ribbon:RibbonCheckBox x:Name="ChkBoats"
+											   Label="Boats (16)" />
+                    <ribbon:RibbonCheckBox x:Name="ChkGiftcards"
+											   Label="Giftcards (5)" />                    
+                </ribbon:RibbonGroup>
+
+
+                <ribbon:RibbonGroup x:Name="Test" 
+									Header="Testing Buttons">
+                 
+                    <ribbon:RibbonButton x:Name="Testing"
+										 SmallImageSource="/eBayFetch;component/Images/32x32/battery.png"
+										 Label="Testing Only" Click="testEbayCalls"/>                    
+            
+                </ribbon:RibbonGroup>                
+
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab x:Name="TabSearch"
+							  Header="Search Category Listing">
+
+                <ribbon:RibbonGroup x:Name="SearchKeywords" 
+									Header="Search a Single or Multiple Categories">
+
+                    <ribbon:RibbonTextBox x:Name="TxtSearchTerm"
+										  Label="Type a Category ID:" />
+                    <ribbon:RibbonButton x:Name="BtnAddIDtoSearchQueue"
+										 Label="Add to Search Queue" 
+                                         SmallImageSource="/eBayFetch;component/Images/32x32/notebook.png" 
+                                         Click="BtnAddIDtoSearchQueue_Click" />
+                    <GroupBox Grid.Row="2">
+                        <GroupBox.Header>Cat ID Queue</GroupBox.Header>
+                        <ListBox Name="CategoryIDListBOx"
+					 Margin="5"  
+					 FontFamily="Consolas" 
+                     MinWidth="50"
+					 MinHeight="30"
+					 BorderBrush="Gray">
+                        </ListBox>
+                    </GroupBox>
+
+
+                    <ribbon:RibbonButton x:Name="BtnClearSearchQueue"
+										 Label="Clear Queue" 
+                                         SmallImageSource="/eBayFetch;component/Images/32x32/map.png" 
+                                         Click="BtnClearSearchQueue_Click" />
+                    <ribbon:RibbonButton x:Name="GetCategorySearch"
+										 SmallImageSource="/eBayFetch;component/Images/32x32/minus.png"
+										 Label="Search by Category ID Queue" Click="GetCategorySearch_Click" />
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name= "FineTuneSearchResults" 
+									Header="Adjust Search Results">
+                    <ribbon:RibbonButton x:Name="BtnDelDuplicateS1"
+										 Label="Remove Duplicates" 
+                                         SmallImageSource="/eBayFetch;component/Images/32x32/copy_page.png" 
+                                         Click="BtnDelDuplicateS1_Click" />
+                    <ribbon:RibbonButton x:Name="BtnDelSearchData"
+										 Label="Delete Search Results" 
+                                         SmallImageSource="/eBayFetch;component/Images/32x32/warning.png" 
+                                         Click="BtnDelSearchData_Click" />
+
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup Header="Category Tools">
+                    <ribbon:RibbonButton x:Name="BtnFetchParentCatID"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/tools.png"
+										 Label="Parent Category ID" Click="BtnFetchParentCatID_Click" />
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup x:Name="GrpSearchOptions"
+									Header="Search Filters">
+                    <ribbon:RibbonComboBox x:Name="CboSiteFilter"
+										   Label="Site Filter:     " 
+										   IsEditable="True">
+                        <ribbon:RibbonGallery SelectedValue="NoFilter"
+											  SelectedValuePath="Content"
+											  MaxColumnCount="1">
+                            <ribbon:RibbonGalleryCategory>
+                                <ribbon:RibbonGalleryItem Content="NoFilter"/>
+                                <ribbon:RibbonGalleryItem Content="ListedInCurrencyImplied"/>
+                                <ribbon:RibbonGalleryItem Content="LocatedInCountryImplied"/>
+                                <ribbon:RibbonGalleryItem Content="AvailableInCountryImplied"/>
+                                <ribbon:RibbonGalleryItem Content="SiteImplied"/>
+                                <ribbon:RibbonGalleryItem Content="BelgiumListing"/>
+                            </ribbon:RibbonGalleryCategory>
+                        </ribbon:RibbonGallery>
+                    </ribbon:RibbonComboBox>
+
+                    <ribbon:RibbonComboBox x:Name="CboItemFilter"
+										   Label="Item Filter:    " 
+										   IsEditable="True">
+                        <ribbon:RibbonGallery SelectedValue="NoFilter"
+											  SelectedValuePath="Content"
+											  MaxColumnCount="1">
+                            <ribbon:RibbonGalleryCategory>
+                                <ribbon:RibbonGalleryItem Content="NoFilter"/>
+                                <ribbon:RibbonGalleryItem Content="AuctionItemsOnly"/>
+                                <ribbon:RibbonGalleryItem Content="FixedPricedItem"/>
+                                <ribbon:RibbonGalleryItem Content="AllItems"/>
+                                <ribbon:RibbonGalleryItem Content="StoreInventoryOnly"/>
+                                <ribbon:RibbonGalleryItem Content="FixedPriceExcludeStoreInventory"/>
+                                <ribbon:RibbonGalleryItem Content="ExcludeStoreInventory"/>
+                                <ribbon:RibbonGalleryItem Content="AllItemTypes"/>
+                                <ribbon:RibbonGalleryItem Content="AllFixedPriceItemTypes"/>
+                                <ribbon:RibbonGalleryItem Content="ClassifiedItemsOnly"/>
+                            </ribbon:RibbonGalleryCategory>
+                        </ribbon:RibbonGallery>
+                    </ribbon:RibbonComboBox>
+
+                    <ribbon:RibbonComboBox x:Name="CboSearchFilter"
+										   Label="Search Filter:" 
+										   IsEditable="True">
+                        <ribbon:RibbonGallery SelectedValue="NoFilter"
+											  SelectedValuePath="Content"
+											  MaxColumnCount="1">
+                            <ribbon:RibbonGalleryCategory>
+                                <ribbon:RibbonGalleryItem Content="NoFilter"/>
+                                <ribbon:RibbonGalleryItem Content="Featured"/>
+                                <ribbon:RibbonGalleryItem Content="SuperFeatured"/>
+                            </ribbon:RibbonGalleryCategory>
+                        </ribbon:RibbonGallery>
+                    </ribbon:RibbonComboBox>
+
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup x:Name="GrpResultOptions"
+									Header="Sorty Result By">
+
+                    <ribbon:RibbonComboBox x:Name="CboSortBy"
+										   Label="Sort Result By:" 
+										   IsEditable="True" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <ribbon:RibbonGallery SelectedValue="DefaultSort"
+											  SelectedValuePath="Content"
+											  MaxColumnCount="1">
+                            <ribbon:RibbonGalleryCategory>
+                                <ribbon:RibbonGalleryItem Content="DefaultSort"/>
+                                <ribbon:RibbonGalleryItem Content="ItemsBy24Hr"/>
+                                <ribbon:RibbonGalleryItem Content="ItemsEndToday"/>
+                                <ribbon:RibbonGalleryItem Content="ItemsEndIn5Hr"/>
+                                <ribbon:RibbonGalleryItem Content="SortByPriceAsc"/>
+                                <ribbon:RibbonGalleryItem Content="SortByPriceDesc"/>
+                                <ribbon:RibbonGalleryItem Content="BestMatchSort"/>
+                                <ribbon:RibbonGalleryItem Content="DistanceSort"/>
+                                <ribbon:RibbonGalleryItem Content="BestMatchCategoryGroup"/>
+                                <ribbon:RibbonGalleryItem Content="PricePlusShippingAsc"/>
+                                <ribbon:RibbonGalleryItem Content="PricePlusShippingDesc"/>
+                            </ribbon:RibbonGalleryCategory>
+                        </ribbon:RibbonGallery>
+                    </ribbon:RibbonComboBox>
+                    <ribbon:RibbonTextBox x:Name="TxtRegion"
+										  Label="Region ID:      " />
+                </ribbon:RibbonGroup>
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab x:Name="TabItem"
+							  Header="Fetch Item Info">
+
+                <ribbon:RibbonGroup x:Name="GrpItemFetchSingle" 
+									Header="Fetch Infomation of an Item">
+                    <ribbon:RibbonButton x:Name="BtnFetchSingle"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/calendar_full.png"
+										 Label="Fetch an Item" Click="BtnFetchSingle_Click" />
+                    <ribbon:RibbonTextBox x:Name="TxtItemTerm"
+										  Label="Item ID:" />
+                    <ribbon:RibbonButton x:Name="BtnDelDuplicateS2"
+										 Label="Remove Duplicates" 
+                                         SmallImageSource="/eBayFetch;component/Images/32x32/key.png" 
+                                         Click="BtnDelDuplicateS2_Click" />
+                    <ribbon:RibbonButton x:Name="BtnDelItemData"
+										 Label="Delete Listing Database" 
+                                         SmallImageSource="/eBayFetch;component/Images/32x32/warning.png" 
+                                         Click="BtnDelItemData_Click" />
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup Header="Item Tools">
+                    <ribbon:RibbonButton x:Name="BtnFetchAttributeID"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/microphone.png"
+										 Label="Fetch AttributeSet ID" Click="BtnFetchAttributeID_Click" />
+                </ribbon:RibbonGroup>
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab x:Name="TabUser"
+							  Header="Fetch User Detail">
+
+                <ribbon:RibbonGroup x:Name="GrpUserFetchSingle" 
+									Header="Fetch User Account Information">
+                    <ribbon:RibbonButton x:Name="BtnFetchUser"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/user.png"
+										 Label="Fetch User Details" Click="BtnFetchUser_Click" />
+                    <ribbon:RibbonTextBox x:Name="TxtUserTerm"
+										  Label="User ID:" />
+                    <ribbon:RibbonButton x:Name="BtnDelDuplicateS3"
+										 Label="Remove Duplicates" 
+                                         SmallImageSource="/eBayFetch;component/Images/32x32/chess.png"  />
+                    <ribbon:RibbonButton x:Name="BtnDelUserData"
+										 Label="Delete Seller Infomation" 
+                                         SmallImageSource="/eBayFetch;component/Images/32x32/warning.png" 
+                                         Click="BtnDelUserData_Click" />
+                </ribbon:RibbonGroup>
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab x:Name="TabDataMagt"
+							  Header="Data Management">
+
+                <ribbon:RibbonGroup x:Name="GrpDataManagement"
+									Header="Data Management" >
+                    <ribbon:RibbonButton x:Name="BtnAccountSwitch"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/user.png"
+										 Label="Switch Account" Click="BtnAccountSwitch_Click" />
+                    <ribbon:RibbonButton x:Name="BtnExportAll"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/chart.png"
+										 Label="Export All Database" Click="BtnExportAll_Click" />
+                    <ribbon:RibbonButton x:Name="BtnDelDupAllData"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/chart_pie.png"
+										 Label="Remove All Duplicates" Click="BtnDelDupAllData_Click" />
+                    <ribbon:RibbonButton x:Name="BtnDeleteAllData"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/remove.png"
+										 Label="Delete All Data" Click="BtnDeleteAllData_Click" />
+                    <ribbon:RibbonButton x:Name="ChangeIsInPanel"
+										 LargeImageSource="/eBayFetch;component/Images/32x32/remove.png"
+										 Label="Change IsInPanel=1 to IsInPanel=0 in Search Table" Click="BtnChangeIsInPanel" />
+                    
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="Auto Fetch Cycles" >
+                    <ribbon:RibbonButton x:Name="BtnRefreshCount"
+										 SmallImageSource="/eBayFetch;component/Images/32x32/flag.png"
+										 Label="Refresh Request Count" Click="BtnRefreshCount_Click" />
+                    <ribbon:RibbonButton x:Name="BtnTest"
+										 SmallImageSource="/eBayFetch;component/Images/32x32/info.png"
+										 Label="Testing Button" Click="BtnTest_Click" />
+                    <ribbon:RibbonTextBox x:Name="TxtSearchInterval"
+										  Label="Search Interval (Mins)" Text="300" TextBoxWidth="40" />
+                    <ribbon:RibbonTextBox x:Name="TxtAutoFetchInterval"
+										  Label="AutoFetch Interval (Mins)" Text="301" TextBoxWidth="40" />
+                </ribbon:RibbonGroup>
+
+
+            </ribbon:RibbonTab>
+
+        </ribbon:Ribbon>
+
+        <Grid Grid.Row="1" Margin="0,0,0,0" Background="{x:Null}" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"  x:Name="StyleControlRow"/>
+                <RowDefinition Height="3*"  x:Name="PreviewRow" />
+                <RowDefinition Height="1*"  x:Name="CodeRow" />
+                <RowDefinition Height="30"  x:Name="ButtonRow" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" 
+						Orientation="Horizontal"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center">
+
+                <Label Name="TxtSearchCountDown" Content="Search Countdown: n/a" />
+                <Label Name="TxtAutoFetchCountDown" Content="Auto Fetch Countdown: n/a" />
+                <Label Content="  Daily Usage (5000 per Acc/Day):" />
+
+                <Label Name="TxtAcc1Usage" Content="Account1 - n/a" />
+                <Label Name="TxtAcc2Usage" Content="Account2 - n/a" />
+            </StackPanel>
+
+            <TabControl Grid.Row="1" Margin="0,0,0,0" Name="TabCGridData" TabStripPlacement="left" RenderTransformOrigin="0.5,0.5">
+                <TabItem Header="Welcome">
+                    <Grid>
+                        <WebBrowser x:Name="webMain" />
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Progress Output" Name="TabPanelDataBase">
+                    <Grid>
+                        <DataGrid AutoGenerateColumns="True" Name="GridPanelData" Margin="0,0,0,0" Visibility="Hidden" />
+                        <ListBox Name="TxtOutput"
+					         Margin="5"  
+					         FontFamily="Consolas" 
+					         MinHeight="30"
+					         BorderBrush="Gray">
+                        </ListBox>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Search List" Name="TabPreliminarySearch">
+                    <Grid>
+                        <DataGrid AutoGenerateColumns="True" Name="GridPreData" Margin="0,0,0,0" />
+                    </Grid>
+                </TabItem>                
+                <TabItem Header="Specific Search" Name="TabDataBase">
+                    <Grid>
+                        <DataGrid AutoGenerateColumns="True" Name="GridItemData" Margin="0,0,0,0" />
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Specific User" Name="TabUserDataBase">
+                    <Grid>
+                        <DataGrid AutoGenerateColumns="True" Name="GridUserData" Margin="0,0,0,0" />
+                    </Grid>
+                </TabItem>
+            </TabControl>
+
+            <Rectangle Grid.Row="1" Name="RectangleSplitter" Margin="100,0,100,-8" Height="10" VerticalAlignment="bottom" Opacity="0">
+                <Shape.Fill>
+                    <RadialGradientBrush>
+                        <GradientBrush.GradientStops>
+                            <GradientStopCollection>
+                                <GradientStop Color="CornflowerBlue" Offset="0.5" />
+                                <GradientStop Color="Transparent" Offset="1" />
+                            </GradientStopCollection>
+                        </GradientBrush.GradientStops>
+                        <Brush.RelativeTransform>
+                            <TransformGroup>
+                                <TransformGroup.Children>
+                                    <TransformCollection>
+                                        <TranslateTransform X="-0.005" Y="-0.3" />
+                                    </TransformCollection>
+                                </TransformGroup.Children>
+                            </TransformGroup>
+                        </Brush.RelativeTransform>
+                    </RadialGradientBrush>
+                </Shape.Fill>
+            </Rectangle>
+
+            <GridSplitter Name="MainGridSplitter" Grid.Row="1" Grid.RowSpan="1" Margin="10,0,10,0" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Width="Auto" Height="5" Cursor="SizeNS" MouseEnter="MainGridSplitter_MouseEnter" MouseLeave="MainGridSplitter_MouseLeave" />
+
+            <GroupBox Grid.Row="2">
+                <GroupBox.Header>Location of Output Data</GroupBox.Header>
+                
+                <StackPanel Orientation="Horizontal" Margin="10,5">
+                    <Grid Margin="5"  >
+                        <StackPanel Orientation="Vertical" Margin="5">
+                            <Label Name="Label1" Content="Folder of Fetched Listing Info Files" />
+                            <TextBox x:Name="FetchedListings" Text="d:\temp\ItemInfo\"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Margin="5"  >
+                        <StackPanel Orientation="Vertical" Margin="5">
+                            <Label Name="Label2" Content="Folder of Fetchyed Item Specifics Files" />
+                            <TextBox x:Name="ItemSpecifics" Text="d:\temp\ItemSpecifics\"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Margin="5"  >
+                        <StackPanel Orientation="Vertical" Margin="5">
+                            <Label Name="Label3" Content="Folder of Listing Bids Files" />
+                            <TextBox x:Name="ItemBids" Text="d:\temp\ItemBids\" />
+                        </StackPanel>
+                    </Grid>
+                    <Grid Margin="5"  >
+                        <StackPanel Orientation="Vertical" Margin="5">
+                            <Label Name="Label4" Content="FILE NAME of the Bidder History (specify the file name here)" />
+                            <TextBox x:Name="BidderHistoryFile" Text="d:\temp\BidderHistory.csv" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+                 
+        </GroupBox>
+
+            <StackPanel Grid.Row="3"  Orientation="Horizontal" Margin="0,5,0,0">
+                <Label Name="LabelTxt" VerticalAlignment="Bottom" 
+					 BorderBrush="Transparent"     
+					 Background="Transparent"/>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+
+
+
+</Window>

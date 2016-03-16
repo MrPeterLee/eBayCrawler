@@ -1,0 +1,389 @@
+[11/6/2014 7:37:52 PM, Informational]
+https://api.sandbox.ebay.com/wsapi?callname=GetItem&siteid=0&client=netsoap
+
+[11/6/2014 7:37:55 PM, Informational]
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <RequesterCredentials xmlns="urn:ebay:apis:eBLBaseComponents">
+      <eBayAuthToken>******</eBayAuthToken>
+    </RequesterCredentials>
+  </soap:Header>
+  <soap:Body>
+    <GetItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+      <DetailLevel>ReturnAll</DetailLevel>
+      <ErrorLanguage>en_US</ErrorLanguage>
+      <MessageID>845663fc-2602-4097-a61f-787a8914ce61</MessageID>
+      <Version>779</Version>
+      <ItemID>110152979123</ItemID>
+    </GetItemRequest>
+  </soap:Body>
+</soap:Envelope>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+    <GetItemResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+      <Timestamp>2014-11-06T14:07:53.682Z</Timestamp>
+      <Ack>Success</Ack>
+      <CorrelationID>845663fc-2602-4097-a61f-787a8914ce61</CorrelationID>
+      <Version>893</Version>
+      <Build>E893_CORE_API_17097905_R1</Build>
+      <Item>
+        <ApplicationData>ic6d9i8400150949213059699735</ApplicationData>
+        <AutoPay>false</AutoPay>
+        <BuyerProtection>ItemIneligible</BuyerProtection>
+        <BuyItNowPrice currencyID="USD">0.0</BuyItNowPrice>
+        <Country>US</Country>
+        <Currency>USD</Currency>
+        <Description>
+
+
+
+
+&lt;style type="text/css"&gt;
+&lt;!--.skinwidth{width:950px}--&gt;
+ul,dl,li,dl,dt,dd{list-style: none;margin:0; padding: 0;}
+ul,li{ margin:0; padding:0; border:0px; list-style-type:none;}
+.Pa_body{font-size:12px;margin:0px auto;padding:0px auto;background:#fff; text-align:center;width:100%; float:left;overflow:hidden;}
+.Pa_center{font-family: Geneva, Arial, Helvetica, sans-serif;font-size:12px; margin:0 auto;}
+.Pa_Top{ width:100%; height:156px; background:url(http://design.pushauction.com/standard/software/Electronics_Products/software_TitleBg.jpg); margin:0 auto;}
+
+.Pa_Title{ font-size:22px; float:left; margin:40px 0 0 40px; color:#fff;font-weight:bold; width:90%; text-align:left;}
+.Pa_conter{ width:100%; margin:5px auto;float:left;}
+.Pa_Product{ width:100%; float:left;}
+.Pa_Product table{ width:100%; margin:0 auto;}
+.Pa_Product td{ text-align:center; vertical-align:middle; padding:2px;}
+.Pa_Product table td img{border:5px solid #e7e8e3; margin:12px; text-align:center; cursor:pointer }
+*{margin:0;padding:0;}
+   .Pa_Box{overflow:hidden;position:relative;width:100%;margin:10px auto 20px auto;padding:0px;}
+   .Pa_TboxL, .Pa_Tboxt, .Pa_TboxR{position:absolute;top:0;z-index:2;height:10px;font-size:0%;}
+   .Pa_TboxL{ left:0; width:10px;}
+   .Pa_Tboxt{ z-index:1;width:100%;}
+   .Pa_TboxR{ right:0;width:10px;}
+
+   .Pa_MboxL, .Pa_MboxR{ position:absolute;z-index:2; width:10px;}
+   .Pa_MboxL{top:0px;left:0;z-index:1;height:2000px;}
+   .Pa_MboxR{top:0px;right:0;z-index:1;height:2000px;}
+   
+   .Pa_Mboxt{width:100%; }
+    h2{text-align:left;font-weight:normal;}
+   .Pa_Demo{ text-align:left; line-height:21px; color:#4e4e4e; font-size:13px; float:left;width:100%; }
+   .Pa_DemoT{ width:96%; text-align:left; float:left; padding-left:18px; padding-top:6px;}
+
+   .Pa_BboxL, .Pa_Bboxt, .Pa_BboxR{position:absolute;bottom:0;z-index:2;height:10px;font-size:0%;}
+   .Pa_BboxL{ left:0;width:10px;}
+   .Pa_Bboxt{ z-index:1;width:100%;}
+   .Pa_BboxR{ right:0; width:10px;}
+.Pa_head{ padding-left:10px; height:32px; width:100%;}
+.Pa_headc{ float:left; font-size:20px; color:#18bdf5; line-height:30px; padding-left:18px;}
+.Pa_line{ width:100%;height:1px; overflow:hidden;border-bottom:1px dotted #ccc; float:left; }
+&lt;/style&gt;
+
+&lt;table style="width:100%"&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;div class="Pa_body"&gt;
+&lt;div class="Pa_center skinwidth"&gt;
+&lt;div class="Pa_Top"&gt;
+&lt;div class="Pa_Title"&gt;Ultra thin Transparent Crystal Clear Hard Back Cover case for  Apple iPhone 6&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="Pa_conter"&gt;
+&lt;div class="Pa_Product"&gt;
+
+&lt;table cellpadding="0" cellspacing="15" style="width:900px;"&gt;
+&lt;tr&gt;
+          &lt;td&gt;
+          &lt;img src='https://lh6.googleusercontent.com/-OSvMxCQnX64/VFnG60vVTII/AAAAAAAAE9E/X-VItlCq7pE/s621-no/%24_12.JPG' style='max-width:350px;max-height:350px' &gt;&lt;img src='https://lh5.googleusercontent.com/-mYy9zphh9DY/VFnG6ObTNhI/AAAAAAAAE9E/idQX69oxyoo/w632-h621-no/%24_12%2B%282%29.JPG' style='max-width:350px;max-height:350px' &gt;&lt;br/&gt;&lt;img src='https://lh6.googleusercontent.com/-BHky3cDJryE/VFnG6NhgiSI/AAAAAAAAE9E/UDOvMlhSybk/w672-h621-no/%24_12%2B%283%29.JPG' style='max-width:350px;max-height:350px' &gt;
+          &lt;/td&gt;
+         &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;/div&gt;
+ &lt;div class="Pa_Box"&gt;
+        &lt;div class="Pa_TboxL"&gt;&lt;/div &gt;
+          &lt;div class="Pa_Tboxt"&gt;&lt;/div &gt;
+          &lt;div class="Pa_TboxR"&gt;&lt;/div &gt;
+       
+          &lt;div class="Pa_MboxL"&gt;&lt;/div &gt;
+          &lt;div class="Pa_Mboxt"&gt;
+         &lt;h2&gt; &lt;span class="Pa_head"&gt;
+              &lt;span class="Pa_headc"&gt;Description&lt;/span&gt;
+               &lt;span class="Pa_line"&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                     &lt;/h2&gt;
+          &lt;div class="Pa_Demo"&gt;&lt;span class="Pa_DemoT"&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-family: Verdana; font-size: 14pt;"&gt;The Case is specifically molded to fit your Apple iPhone 6.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-family: Verdana; font-size: 14pt;"&gt;It is slim-fit, giving you comfortable hand feelings.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-family: Verdana; font-size: 14pt;"&gt;Full-body case protects your phone from scratches, bumps and dings.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-family: Verdana; font-size: 14pt;"&gt;Smart design, gives you total access to all functionality and buttons without removing the phone from the case.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-family: Verdana; font-size: 14pt;"&gt;Light weight and hard&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-family: Verdana; font-size: 14pt;"&gt;Easy to install - just snap on to your phone.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/div&gt;
+         &lt;/div&gt;
+          &lt;div class="Pa_MboxR"&gt;&lt;/div &gt;
+       
+          &lt;div class="Pa_BboxL"&gt;&lt;/div&gt;
+          &lt;div class="Pa_Bboxt"&gt;&lt;/div&gt;
+          &lt;div class="Pa_BboxR"&gt;&lt;/div&gt;
+       &lt;/div&gt;
+       &lt;div class='Pa_Box'&gt;
+        &lt;div class='Pa_TboxL'&gt;&lt;/div &gt;
+          &lt;div class='Pa_Tboxt'&gt;&lt;/div &gt;
+          &lt;div class='Pa_TboxR'&gt;&lt;/div &gt;       
+          &lt;div class='Pa_MboxL'&gt;&lt;/div &gt;
+          &lt;div class='Pa_Mboxt'&gt;
+          &lt;h2&gt;
+           &lt;span class='Pa_head'&gt;
+           &lt;span class='Pa_headL'&gt;&lt;/span&gt;
+
+           &lt;span class='Pa_headR'&gt;&lt;/span&gt;
+           &lt;span class='Pa_headc'&gt;Payment&lt;/span&gt;
+           &lt;span class='Pa_Right'&gt;&lt;/span&gt;
+           &lt;span class='Pa_line'&gt;&lt;/span&gt;
+           &lt;/span&gt;
+           &lt;/h2&gt;
+          &lt;div class='Pa_Demo'&gt;&lt;span class='Pa_DemoT'&gt;&lt;ul&gt;&lt;li&gt;We only accept PayPal and credit card through Paypal. We do not accept any postal order,banker&amp;#39;s draft or cheque. If you do not have a PayPal account, please register at www.paypal.com.&lt;/li&gt;&lt;li&gt;Please make sure you will pay by paypal before you place an order.&lt;/li&gt;&lt;li&gt;After the auction ends, payment must be received within 7 days. Otherwsie non-payment alert will be sent to you. (If you have any problems cannot finish payment on time, please feel free to contact us.)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/div&gt;
+         &lt;/div&gt;
+          &lt;div class='Pa_MboxR'&gt;&lt;/div &gt;       
+          &lt;div class='Pa_BboxL'&gt;&lt;/div&gt;
+          &lt;div class='Pa_Bboxt'&gt;&lt;/div&gt;
+          &lt;div class='Pa_BboxR'&gt;&lt;/div&gt;
+       &lt;/div&gt;&lt;div class='Pa_Box'&gt;
+        &lt;div class='Pa_TboxL'&gt;&lt;/div &gt;
+          &lt;div class='Pa_Tboxt'&gt;&lt;/div &gt;
+          &lt;div class='Pa_TboxR'&gt;&lt;/div &gt;       
+          &lt;div class='Pa_MboxL'&gt;&lt;/div &gt;
+          &lt;div class='Pa_Mboxt'&gt;
+          &lt;h2&gt;
+           &lt;span class='Pa_head'&gt;
+           &lt;span class='Pa_headL'&gt;&lt;/span&gt;
+
+           &lt;span class='Pa_headR'&gt;&lt;/span&gt;
+           &lt;span class='Pa_headc'&gt;Delivery details&lt;/span&gt;
+           &lt;span class='Pa_Right'&gt;&lt;/span&gt;
+           &lt;span class='Pa_line'&gt;&lt;/span&gt;
+           &lt;/span&gt;
+           &lt;/h2&gt;
+          &lt;div class='Pa_Demo'&gt;&lt;span class='Pa_DemoT'&gt;&lt;ul type="disc"&gt;
+ &lt;li&gt;&lt;span style="font-size:9.0pt"&gt;We offer fast shipping. All items will be deliver
+     within 1 business day. &lt;/span&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;span style="font-size:9.0pt"&gt;We only ship item to your confirmed PayPal address.
+     Please make sure you have the correct address before you place an order.&lt;/span&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;span style="font-size:9.0pt;background:white"&gt;If you need the item be shipped to the
+     other address other than the PayPal confirmed address, please contact
+     us before you buy them. &lt;/span&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;span style="font-size:9.0pt;background:white"&gt;We do not responsible for the
+     order which the shipping address is provided wrongly.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;&lt;/div&gt;
+         &lt;/div&gt;
+          &lt;div class='Pa_MboxR'&gt;&lt;/div &gt;       
+          &lt;div class='Pa_BboxL'&gt;&lt;/div&gt;
+          &lt;div class='Pa_Bboxt'&gt;&lt;/div&gt;
+          &lt;div class='Pa_BboxR'&gt;&lt;/div&gt;
+       &lt;/div&gt;&lt;div class='Pa_Box'&gt;
+        &lt;div class='Pa_TboxL'&gt;&lt;/div &gt;
+          &lt;div class='Pa_Tboxt'&gt;&lt;/div &gt;
+          &lt;div class='Pa_TboxR'&gt;&lt;/div &gt;       
+          &lt;div class='Pa_MboxL'&gt;&lt;/div &gt;
+          &lt;div class='Pa_Mboxt'&gt;
+          &lt;h2&gt;
+           &lt;span class='Pa_head'&gt;
+           &lt;span class='Pa_headL'&gt;&lt;/span&gt;
+
+           &lt;span class='Pa_headR'&gt;&lt;/span&gt;
+           &lt;span class='Pa_headc'&gt;Terms of sales&lt;/span&gt;
+           &lt;span class='Pa_Right'&gt;&lt;/span&gt;
+           &lt;span class='Pa_line'&gt;&lt;/span&gt;
+           &lt;/span&gt;
+           &lt;/h2&gt;
+          &lt;div class='Pa_Demo'&gt;&lt;span class='Pa_DemoT'&gt;&lt;ul&gt;&lt;li&gt;&lt;span style='white-space:pre'&gt;We accept exchange or replace the item within 30 days.&lt;/span&gt; &lt;br /&gt;&lt;span style='white-space:pre'&gt;Buyer is responsible to pay the return shipping cost regardless any reasons. No exception.&lt;/span&gt; &lt;/li&gt;&lt;li&gt;&lt;span style='white-space:pre'&gt;We will process RMA within 7-14 days when we receive the item. We exchange/replace item if only item is in same condition as when we shipped out.&lt;/span&gt; &lt;/li&gt;&lt;li&gt;&lt;span style='white-space:pre'&gt;Unwanted product returns will be subject to a 15% restock fee and merchandise must be in new condition only.&lt;/span&gt; &lt;/li&gt;&lt;li&gt;&lt;span style='white-space:pre;color:#ff0000'&gt;If you are not entirely satisfied for any reason, please &lt;strong&gt;DO NOT&lt;/strong&gt; leave&lt;strong&gt; NEGATIVE&lt;/strong&gt; or &lt;strong&gt;NEUTRAL&lt;/strong&gt; feedback immediately&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style='white-space:pre;color:#ff0000'&gt;We work hard to make sure&lt;strong&gt; EVERY CUSTOMER&lt;/strong&gt; is &lt;strong&gt;100%&lt;/strong&gt;&lt;strong&gt; SATISFIED&lt;/strong&gt; and resolve any problems you have.&lt;/span&gt;&lt;span style="color:#ff0000"&gt; &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style='white-space:pre'&gt;If you are satisfied with our products, please leave us positive feedback and 5 scores DSR. We really appreciate it. Thank you!&lt;/span&gt; &lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/div&gt;
+         &lt;/div&gt;
+          &lt;div class='Pa_MboxR'&gt;&lt;/div &gt;       
+          &lt;div class='Pa_BboxL'&gt;&lt;/div&gt;
+          &lt;div class='Pa_Bboxt'&gt;&lt;/div&gt;
+          &lt;div class='Pa_BboxR'&gt;&lt;/div&gt;
+       &lt;/div&gt;&lt;div class='Pa_Box'&gt;
+        &lt;div class='Pa_TboxL'&gt;&lt;/div &gt;
+          &lt;div class='Pa_Tboxt'&gt;&lt;/div &gt;
+          &lt;div class='Pa_TboxR'&gt;&lt;/div &gt;       
+          &lt;div class='Pa_MboxL'&gt;&lt;/div &gt;
+          &lt;div class='Pa_Mboxt'&gt;
+          &lt;h2&gt;
+           &lt;span class='Pa_head'&gt;
+           &lt;span class='Pa_headL'&gt;&lt;/span&gt;
+
+           &lt;span class='Pa_headR'&gt;&lt;/span&gt;
+           &lt;span class='Pa_headc'&gt;Contact us&lt;/span&gt;
+           &lt;span class='Pa_Right'&gt;&lt;/span&gt;
+           &lt;span class='Pa_line'&gt;&lt;/span&gt;
+           &lt;/span&gt;
+           &lt;/h2&gt;
+          &lt;div class='Pa_Demo'&gt;&lt;span class='Pa_DemoT'&gt;&lt;p&gt;&lt;span style="color:#0000ff"&gt;Your satisfication is our first priority, If you have any questions, please do not hesitate to contact us. We are here to help. We will answer your email within 24 hours.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;We &amp;nbsp;hope you enjoy doing business with us!&lt;/p&gt;&lt;/span&gt;&lt;/div&gt;
+         &lt;/div&gt;
+          &lt;div class='Pa_MboxR'&gt;&lt;/div &gt;       
+          &lt;div class='Pa_BboxL'&gt;&lt;/div&gt;
+          &lt;div class='Pa_Bboxt'&gt;&lt;/div&gt;
+          &lt;div class='Pa_BboxR'&gt;&lt;/div&gt;
+       &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;div id='pushauctionlogosigndiv' style='text-align:center;width:100%;padding-top:20px'&gt;&lt;img src='http://image4.pushauction.com/poweredbypushauction.png' alert='PushAuction' border='0'/&gt;&lt;a href='http://4.pushauction.com/'  target='_blank'&gt;&lt;div style='padding-top:10px;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:blue;'&gt;Engineered for professional eBay sellers！&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;</Description>
+        <GiftIcon>0</GiftIcon>
+        <HitCounter>NoHitCounter</HitCounter>
+        <ItemID>110152979123</ItemID>
+        <ListingDetails>
+          <Adult>false</Adult>
+          <BindingAuction>false</BindingAuction>
+          <CheckoutEnabled>true</CheckoutEnabled>
+          <ConvertedBuyItNowPrice currencyID="USD">0.0</ConvertedBuyItNowPrice>
+          <ConvertedStartPrice currencyID="USD">0.01</ConvertedStartPrice>
+          <HasReservePrice>false</HasReservePrice>
+          <StartTime>2014-11-05T22:21:42.000Z</StartTime>
+          <EndTime>2014-11-06T22:21:42.000Z</EndTime>
+          <ViewItemURL>http://cgi.sandbox.ebay.com/Ultra-thin-Transparent-Crystal-Clear-Hard-Back-Cover-case-Apple-iPhone-6-/110152979123</ViewItemURL>
+          <HasUnansweredQuestions>false</HasUnansweredQuestions>
+          <HasPublicMessages>false</HasPublicMessages>
+          <ViewItemURLForNaturalSearch>http://cgi.sandbox.ebay.com/Ultra-thin-Transparent-Crystal-Clear-Hard-Back-Cover-case-Apple-iPhone-6-/110152979123</ViewItemURLForNaturalSearch>
+        </ListingDetails>
+        <ListingDesigner>
+          <LayoutID>10000</LayoutID>
+          <ThemeID>10</ThemeID>
+        </ListingDesigner>
+        <ListingDuration>Days_1</ListingDuration>
+        <ListingType>Chinese</ListingType>
+        <Location>Fremont, California</Location>
+        <PaymentMethods>PayPal</PaymentMethods>
+        <PrimaryCategory>
+          <CategoryID>20349</CategoryID>
+          <CategoryName>Cell Phones &amp; Accessories:Cell Phone Accessories:Cases, Covers &amp; Skins</CategoryName>
+        </PrimaryCategory>
+        <PrivateListing>false</PrivateListing>
+        <Quantity>1</Quantity>
+        <ReviseStatus>
+          <ItemRevised>false</ItemRevised>
+        </ReviseStatus>
+        <Seller>
+          <AboutMePage>false</AboutMePage>
+          <Email>Invalid Request</Email>
+          <FeedbackScore>20</FeedbackScore>
+          <PositiveFeedbackPercent>100.0</PositiveFeedbackPercent>
+          <FeedbackPrivate>false</FeedbackPrivate>
+          <FeedbackRatingStar>Yellow</FeedbackRatingStar>
+          <IDVerified>true</IDVerified>
+          <eBayGoodStanding>true</eBayGoodStanding>
+          <NewUser>false</NewUser>
+          <RegistrationDate>1997-01-01T00:00:00.000Z</RegistrationDate>
+          <Site>US</Site>
+          <Status>Confirmed</Status>
+          <UserID>ac_us_buyer1</UserID>
+          <UserIDChanged>false</UserIDChanged>
+          <UserIDLastChanged>2007-06-27T07:31:11.000Z</UserIDLastChanged>
+          <VATStatus>NoVATTax</VATStatus>
+          <SellerInfo>
+            <AllowPaymentEdit>true</AllowPaymentEdit>
+            <CheckoutEnabled>true</CheckoutEnabled>
+            <CIPBankAccountStored>false</CIPBankAccountStored>
+            <GoodStanding>true</GoodStanding>
+            <LiveAuctionAuthorized>false</LiveAuctionAuthorized>
+            <MerchandizingPref>OptIn</MerchandizingPref>
+            <QualifiesForB2BVAT>false</QualifiesForB2BVAT>
+            <StoreOwner>false</StoreOwner>
+            <SafePaymentExempt>true</SafePaymentExempt>
+          </SellerInfo>
+          <MotorsDealer>false</MotorsDealer>
+        </Seller>
+        <SellingStatus>
+          <BidCount>0</BidCount>
+          <BidIncrement currencyID="USD">0.05</BidIncrement>
+          <ConvertedCurrentPrice currencyID="USD">0.01</ConvertedCurrentPrice>
+          <CurrentPrice currencyID="USD">0.01</CurrentPrice>
+          <MinimumToBid currencyID="USD">0.01</MinimumToBid>
+          <QuantitySold>0</QuantitySold>
+          <ReserveMet>true</ReserveMet>
+          <SecondChanceEligible>false</SecondChanceEligible>
+          <ListingStatus>Active</ListingStatus>
+          <QuantitySoldByPickupInStore>0</QuantitySoldByPickupInStore>
+        </SellingStatus>
+        <ShippingDetails>
+          <ApplyShippingDiscount>false</ApplyShippingDiscount>
+          <CalculatedShippingRate>
+            <WeightMajor measurementSystem="English" unit="lbs">0</WeightMajor>
+            <WeightMinor measurementSystem="English" unit="oz">0</WeightMinor>
+          </CalculatedShippingRate>
+          <SalesTax>
+            <SalesTaxPercent>0.0</SalesTaxPercent>
+            <ShippingIncludedInTax>false</ShippingIncludedInTax>
+          </SalesTax>
+          <ShippingServiceOptions>
+            <ShippingService>USPSFirstClass</ShippingService>
+            <ShippingServiceCost currencyID="USD">0.0</ShippingServiceCost>
+            <ShippingServicePriority>1</ShippingServicePriority>
+            <ExpeditedService>false</ExpeditedService>
+            <ShippingTimeMin>2</ShippingTimeMin>
+            <ShippingTimeMax>5</ShippingTimeMax>
+            <FreeShipping>true</FreeShipping>
+          </ShippingServiceOptions>
+          <InternationalShippingServiceOption>
+            <ShippingService>USPSFirstClassMailInternational</ShippingService>
+            <ShippingServiceCost currencyID="USD">7.99</ShippingServiceCost>
+            <ShippingServicePriority>1</ShippingServicePriority>
+            <ShipToLocation>Worldwide</ShipToLocation>
+          </InternationalShippingServiceOption>
+          <ShippingType>Flat</ShippingType>
+          <ThirdPartyCheckout>false</ThirdPartyCheckout>
+          <ShippingDiscountProfileID>0</ShippingDiscountProfileID>
+          <InternationalShippingDiscountProfileID>0</InternationalShippingDiscountProfileID>
+          <SellerExcludeShipToLocationsPreference>true</SellerExcludeShipToLocationsPreference>
+        </ShippingDetails>
+        <ShipToLocations>Worldwide</ShipToLocations>
+        <Site>US</Site>
+        <StartPrice currencyID="USD">0.01</StartPrice>
+        <TimeLeft>PT8H13M49S</TimeLeft>
+        <Title>Ultra thin Transparent Crystal Clear Hard Back Cover case for  Apple iPhone 6</Title>
+        <UUID>2BED71299B634AE18B2AADA8184008D8</UUID>
+        <HitCount>0</HitCount>
+        <LocationDefaulted>true</LocationDefaulted>
+        <GetItFast>false</GetItFast>
+        <SKU>UTHCC</SKU>
+        <PostalCode>94555</PostalCode>
+        <PictureDetails>
+          <GalleryType>Gallery</GalleryType>
+          <GalleryURL>http://i.ebayimg.com/00/s/NDkyWDUwMA==/z/fHgAAOSwabhUWcqR/$_1.JPG?set_id=8800005007</GalleryURL>
+          <PhotoDisplay>PicturePack</PhotoDisplay>
+          <PictureURL>http://i.ebayimg.com/00/s/NDkyWDUwMA==/z/fHgAAOSwabhUWcqR/$_1.JPG?set_id=8800005007</PictureURL>
+          <PictureURL>http://i.ebayimg.com/00/s/NDYyWDUwMA==/z/u0MAAOSwrx5UWcqS/$_1.JPG?set_id=8800005007</PictureURL>
+          <PictureURL>http://i.ebayimg.com/00/s/NTAwWDUwMA==/z/dT8AAOSwzOxUWcqV/$_1.JPG?set_id=8800005007</PictureURL>
+          <PictureURL>http://i.ebayimg.com/00/s/NTAwWDUwMA==/z/1isAAOSwdpxUWcqX/$_1.JPG?set_id=8800005007</PictureURL>
+          <PictureSource>EPS</PictureSource>
+        </PictureDetails>
+        <DispatchTimeMax>1</DispatchTimeMax>
+        <ProxyItem>false</ProxyItem>
+        <BuyerGuaranteePrice currencyID="USD">20000.0</BuyerGuaranteePrice>
+        <IntangibleItem>false</IntangibleItem>
+        <ReturnPolicy>
+          <RefundOption>MoneyBack</RefundOption>
+          <Refund>Money Back</Refund>
+          <ReturnsWithinOption>Days_14</ReturnsWithinOption>
+          <ReturnsWithin>14 Days</ReturnsWithin>
+          <ReturnsAcceptedOption>ReturnsAccepted</ReturnsAcceptedOption>
+          <ReturnsAccepted>Returns Accepted</ReturnsAccepted>
+          <ShippingCostPaidByOption>Buyer</ShippingCostPaidByOption>
+          <ShippingCostPaidBy>Buyer</ShippingCostPaidBy>
+        </ReturnPolicy>
+        <PaymentAllowedSite>eBayMotors</PaymentAllowedSite>
+        <PaymentAllowedSite>CanadaFrench</PaymentAllowedSite>
+        <PaymentAllowedSite>Canada</PaymentAllowedSite>
+        <PaymentAllowedSite>US</PaymentAllowedSite>
+        <ConditionID>1000</ConditionID>
+        <ConditionDisplayName>New</ConditionDisplayName>
+        <PostCheckoutExperienceEnabled>false</PostCheckoutExperienceEnabled>
+        <ShippingPackageDetails>
+          <ShippingIrregular>false</ShippingIrregular>
+          <ShippingPackage>None</ShippingPackage>
+          <WeightMajor measurementSystem="English" unit="lbs">0</WeightMajor>
+          <WeightMinor measurementSystem="English" unit="oz">0</WeightMinor>
+        </ShippingPackageDetails>
+        <HideFromSearch>false</HideFromSearch>
+      </Item>
+    </GetItemResponse>
+  </soapenv:Body>
+</soapenv:Envelope>
+

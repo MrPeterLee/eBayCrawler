@@ -1,0 +1,12 @@
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\bin\Debug\SampleShippingServiceApplication.exe.config
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\bin\Debug\SampleShippingServiceApplication.exe
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\bin\Debug\SampleShippingServiceApplication.pdb
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\bin\Debug\eBay.Service.dll
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\bin\Debug\Samples.Helper.dll
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\bin\Debug\eBay.Service.xml
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\bin\Debug\Samples.Helper.xml
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\obj\Debug\SampleShippingServiceApplication.FormMain.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\obj\Debug\SampleShippingServiceApplication.ProgressBar.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\obj\Debug\SampleShippingServiceApplication.csproj.GenerateResource.Cache
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\obj\Debug\SampleShippingServiceApplication.exe
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SampleShippingServiceApplication\obj\Debug\SampleShippingServiceApplication.pdb

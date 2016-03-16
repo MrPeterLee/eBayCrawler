@@ -1,0 +1,8 @@
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddFixedPriceItem\bin\Debug\ConsoleAddFixedPriceItem.exe.config
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddFixedPriceItem\bin\Debug\ConsoleAddFixedPriceItem.exe
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddFixedPriceItem\bin\Debug\ConsoleAddFixedPriceItem.pdb
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddFixedPriceItem\bin\Debug\eBay.Service.dll
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddFixedPriceItem\bin\Debug\eBay.Service.xml
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddFixedPriceItem\obj\Debug\ConsoleAddFixedPriceItem.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddFixedPriceItem\obj\Debug\ConsoleAddFixedPriceItem.exe
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\ConsoleAddFixedPriceItem\obj\Debug\ConsoleAddFixedPriceItem.pdb

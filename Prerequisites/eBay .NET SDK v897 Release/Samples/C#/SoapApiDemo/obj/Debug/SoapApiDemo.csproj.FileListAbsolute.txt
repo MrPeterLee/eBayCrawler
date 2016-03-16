@@ -1,0 +1,124 @@
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\SoapApiDemo.exe.config
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\SoapApiDemo.exe
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\SoapApiDemo.pdb
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\eBay.Service.dll
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\eBay.Service.SDK.Attribute.dll
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\Samples.Helper.dll
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\Interop.MSXML2.dll
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\eBay.Service.xml
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\eBay.Service.SDK.Attribute.xml
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\Samples.Helper.xml
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapApiDemo.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAccount.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddDispute.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddDisputeResponse.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddItem.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddOrder.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddSecondChanceItem.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddToItemDescription.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmEndItem.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetAccount.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetAllBidders.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetApiAccessRules.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetBestOffers.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetCategories.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetCrossPromotions.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetDispute.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGeteBayOfficialTime.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetFeedback.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetItem.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetItemRecommendations.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetItemShipping.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetItemTransactions.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetMemberMessages.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetMyeBayBuying.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetMyeBaySelling.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetNotificationPreferences.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetOrders.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetPromotionRules.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetSellerEvents.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetSellerList.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetSellerTransactions.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetStore.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetStoreCustomPage.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetStoreOptions.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetSuggestedCategories.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetTokenStatus.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetUser.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetUserDisputes.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmLeaveFeedback.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmMain.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmRelistItem.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmRespondToBestOffer.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmReviseCheckoutStatus.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmReviseItem.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmSellerReverseDispute.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmSendInvoice.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmSetNotificationPreferences.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmSetStore.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmUploadPictures.resources
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapApiDemo.csproj.GenerateResource.Cache
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapApiDemo.exe
+C:\Program Files (x86)\eBay\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapApiDemo.pdb
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\SoapApiDemo.exe.config
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapApiDemo.exe
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapApiDemo.pdb
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\SoapApiDemo.exe
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\SoapApiDemo.pdb
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\eBay.Service.dll
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\eBay.Service.SDK.Attribute.dll
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\Samples.Helper.dll
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\Interop.MSXML2.dll
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\eBay.Service.xml
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\eBay.Service.SDK.Attribute.xml
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\bin\Debug\Samples.Helper.xml
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapApiDemo.csprojResolveAssemblyReference.cache
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAccount.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddDispute.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddDisputeResponse.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddItem.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddOrder.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddSecondChanceItem.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmAddToItemDescription.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmEndItem.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetAccount.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetAllBidders.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetApiAccessRules.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetBestOffers.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetCategories.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetCrossPromotions.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetDispute.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGeteBayOfficialTime.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetFeedback.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetItem.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetItemRecommendations.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetItemShipping.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetItemTransactions.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetMemberMessages.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetMyeBayBuying.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetMyeBaySelling.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetNotificationPreferences.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetOrders.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetPromotionRules.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetSellerEvents.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetSellerList.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetSellerTransactions.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetStore.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetStoreCustomPage.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetStoreOptions.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetSuggestedCategories.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetTokenStatus.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetUser.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmGetUserDisputes.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmLeaveFeedback.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmMain.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmRelistItem.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmRespondToBestOffer.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmReviseCheckoutStatus.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmReviseItem.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmSellerReverseDispute.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmSendInvoice.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmSetNotificationPreferences.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmSetStore.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapLibraryDemo.FrmUploadPictures.resources
+D:\Dropbox\Projects\2014 - C# eBay Fetch\Prerequisites\eBay .NET SDK v897 Release\Samples\C#\SoapApiDemo\obj\Debug\SoapApiDemo.csproj.GenerateResource.Cache

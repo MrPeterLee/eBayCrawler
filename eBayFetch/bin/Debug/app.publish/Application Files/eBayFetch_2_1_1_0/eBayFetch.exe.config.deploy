@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+  </configSections>
+  <connectionStrings>
+    <add name="SoapApiDemo.Properties.Settings.Database1ConnectionString" connectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True" providerName="System.Data.SqlClient" />
+    <add name="eBayFetch.Properties.Settings.eBayFetchDataConnectionString" connectionString="Data Source=.\sqlexpress;Initial Catalog=eBayFetchData;Integrated Security=True;Pooling=False" providerName="System.Data.SqlClient" />
+    <add name="eBayFetch.Properties.Settings.FetchInfoConnectionString" connectionString="Data Source=.\sqlexpress;Initial Catalog=FetchInfo;Integrated Security=True;Pooling=False" providerName="System.Data.SqlClient" />
+    <add name="eBayFetch.Properties.Settings.eBayFetchSQLConnectionString" connectionString="Data Source=.\sqlexpress;Initial Catalog=eBayFetchSQL;Integrated Security=True;Pooling=False" providerName="System.Data.SqlClient" />
+    <add name="eBayFetch.Properties.Settings.eBayFetchSQLConnectionStrLocal" connectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\eBayFetchSQL.mdf;Integrated Security=True;Connect Timeout=30" providerName="System.Data.SqlClient" />
+    <add name="eBayFetchSQLEntities" connectionString="metadata=res://*/eBayFetchDataModel.csdl|res://*/eBayFetchDataModel.ssdl|res://*/eBayFetchDataModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\v11.0;attachdbfilename=|DataDirectory|\eBayFetchSQL.mdf;integrated security=True;connect timeout=30;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+  <appSettings>
+    <add key="Version" value="779" />
+    <add key="TimeOut" value="60000" />
+    <add key="LogFileName" value="Log.txt" />
+    <!-- your Developer Id with eBay -->
+    <add key="Environment.DevId" value="bb421841-8fa1-442c-b646-af5aab848c15" />
+    <!-- your Application Id with eBay -->
+    <add key="Environment.AppId" value="PeterLee-53ec-4454-ab66-8844ada44465" />
+    <!-- your Application Certificate with eBay -->
+    <add key="Environment.CertId" value="c4ea60c1-4497-4635-a44e-0dba05389549" />
+    <!-- API Server URL -->
+    <!-- For production site use: https://api.ebay.com/wsapi -->
+    <!-- For Sandbox use: https://api.sandbox.ebay.com/wsapi -->
+    <add key="Environment.ApiServerUrl" value="https://api.ebay.com/wsapi" />
+    <!-- EPS Server URL -->
+    <!-- For production site use: https://api.ebay.com/ws/api.dll"/-->
+    <add key="Environment.EpsServerUrl" value="https://api.ebay.com/ws/api.dll" />
+    <!-- eBay Signin URL -->
+    <!-- For production site use: https://signin.ebay.com/ws/eBayISAPI.dll?SignIn -->
+    <!-- https://signin.sandbox.ebay.com/ws/eBayISAPI.dll?SignIn -->
+    <add key="Environment.SignInUrl" value="https://signin.ebay.com/ws/eBayISAPI.dll?SignIn" />
+    <!-- ViewItem URL -->
+    <!-- For production site use: http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&amp;item={0} -->
+    <add key="Environment.ViewItemUrl" value="http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&amp;item={0}" />
+    <!-- token is for both API server and EPS server -->
+    <add key="UserAccount.ApiToken" value="AgAAAA**AQAAAA**aAAAAA**NrJZUw**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6AEk4CnC5KKpAidj6x9nY+seQ**6vQAAA**AAMAAA**L+28EHJN9l7AdyHMfejhnd01A1NY1CdcMK/P7ikHJqCJfM6gytEhG4VZ4UqJVHomv1suY4El+AZyO8mGLqN+A1roP2cfGlYfu6qap3IMfmmIoJdIwRmYjxa++obRGXPNZMmI2sD9tSvxOpAeg0zAmpfUBQC1dBDK/+bQxP/l7IXbPh8ruKgXbfKQl0W3pzocgnMau9BclVQsNnlN+mGpBMXgU8nTM2L/pbwy9b/Fi7+3m5xE1ytnIeMYOM33tn7643BnD+smVuKnA3qUy/k6LZlPWAbMJbnKfyQLoz52ZIgdpbs6Y4Br6nM4lPAWlWY9rIgStNDAmaIlfg6pl4gmBHaBXZb4vPZxyQLEYyEuaZDBRA9oYnCpELibXfsxeYk94Yczc/gvkdgDFVRt7CoRy0WSQvU9stU3oXRO8Yo1eiOVT00bwrcyQqjomEgP4C5vfmlXWRzun88gMxLX47atTLpqrxBswRAT80Uu9Jm9fbISjcOlLgH/jlQeaDaIsBDR7B1Lb3BiIQK4w6bYEdIlDv9J8o9hq/g9E+or7s6BCBPYr+NSpk2FY2W3+OQ8WC4FVjBo3T1KJAy1fmI4g7UsHTqLm3AARJYNVGB5h5Qn8+aNuhdT899TaW4Pu48owKZze8KqBtEVBo6mymWFfuAK2TwnnsyC95XdqPnQSqqsqzE96+ijDVEe0EJVRQUhidGSIwIBr7hK4bFqry5qrqvDS18e90i/Wxjvs7dRrwurcMyrnYIWgeD8XwRAoAJ3k1v2" />
+    <!-- eBay site ID -->
+    <add key="UserAccount.eBayUserSiteId" value="0" />
+    <add key="logexception" value="true" />
+    <add key="logmessages" value="true" />
+    <add key="logsdkmessages" value="true" />
+    <add key="logsdk" value="true" />
+    <add key="logfile" value="Log.txt" />
+    <!-- Rule Name-->
+    <add key="RuName" value="" />
+    <!-- Set this if you access eBay API server behind a proxy server-->
+    <add key="Proxy.Host" value="" />
+    <add key="Proxy.Port" value="" />
+    <!-- set proxy server username/password if necessary-->
+    <add key="Proxy.Username" value="" />
+    <add key="Proxy.Password" value="" />
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+  </appSettings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0" />
+  </startup>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

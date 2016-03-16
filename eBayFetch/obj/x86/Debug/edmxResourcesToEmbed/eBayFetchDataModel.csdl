@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="eBayFetchSQLModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="eBayFetchSQLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="S1SearchTable" EntityType="eBayFetchSQLModel.S1SearchTable" />
+    <EntitySet Name="S2ItemInfo" EntityType="eBayFetchSQLModel.S2ItemInfo" />
+    <EntitySet Name="S3UserDetail" EntityType="eBayFetchSQLModel.S3UserDetail" />
+    <EntitySet Name="S4PanelData" EntityType="eBayFetchSQLModel.S4PanelData" />
+    <EntitySet Name="sysdiagrams" EntityType="eBayFetchSQLModel.sysdiagram" />
+  </EntityContainer>
+  <EntityType Name="S1SearchTable">
+    <Key>
+      <PropertyRef Name="SearchID" />
+    </Key>
+    <Property Type="Int32" Name="SearchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ItemID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FetchTime" Nullable="false" />
+    <Property Type="Int32" Name="EndTimeDum" />
+    <Property Type="Int32" Name="IsInPanelData" />
+    <Property Type="String" Name="Category" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CategoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="S2ItemInfo">
+    <Key>
+      <PropertyRef Name="SearchID" />
+    </Key>
+    <Property Type="Int32" Name="SearchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ItemID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FetchTime" Nullable="false" />
+    <Property Type="DateTime" Name="StartTime" Nullable="false" />
+    <Property Type="DateTime" Name="EndTime" Nullable="false" />
+    <Property Type="String" Name="Price" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrivateListing" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuyItNowPrice" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BidCount" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Quantity" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="QuantitySold" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrimaryCategory" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrimaryCategoryID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="IsInPanelData" />
+  </EntityType>
+  <EntityType Name="S3UserDetail">
+    <Key>
+      <PropertyRef Name="TableIndex" />
+    </Key>
+    <Property Type="Int32" Name="TableIndex" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="UserID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FeedBackScore" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="SellerRegDate" />
+    <Property Type="String" Name="SellerLevel" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Site" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerStar" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerStore" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserIsNewReg" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerVerified" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerIDChanged" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotorsDealer" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="S4PanelData">
+    <Key>
+      <PropertyRef Name="SearchID" />
+    </Key>
+    <Property Type="Int32" Name="SearchID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ItemID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SellerID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Title" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FetchTime" />
+    <Property Type="DateTime" Name="StartTime" />
+    <Property Type="DateTime" Name="EndTime" />
+    <Property Type="String" Name="Price" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrivateListing" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BuyItNowPrice" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BidCount" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Quantity" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="QuantitySold" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrimaryCategory" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PrimaryCategoryID" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="UserInfoFetched" />
+    <Property Type="String" Name="Email" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FeedBackScore" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SellerRegDate" />
+    <Property Type="String" Name="SellerLevel" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Site" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SellerStar" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SellerStore" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserIsNewReg" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SellerVerified" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SellerIDChanged" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Ones" />
+    <Property Type="String" Name="MotorsDealer" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SecondaryCategoryCategoryName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SecondaryCategoryCategoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusHighBidderUserID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BestOfferDetailsBestOfferCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BestOfferDetailsBestOfferEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductListingDetailsProductID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PictureDetailsPictureURL" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PayPalEmailAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ApplicationData" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PicNumber" />
+    <Property Type="String" Name="BuyerProtection" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuyerResponsibleForShipping" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuyItNowPricecurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuyItNowPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuyerGuaranteePricecurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BuyerGuaranteePriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CategoryBasedAttributesPrefill" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CategoryMappingAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CharityCharityID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClassifiedAdPayPerLeadFeecurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClassifiedAdPayPerLeadFeeValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConditionDisplayName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConditionID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Country" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CrossBorderTrade" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CrossPromotionItemID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Currency" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DescriptionReviseMode" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DisableBuyerRequirements" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DispatchTimeMax" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DistanceDistanceUnit" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="eBayNotes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryAutoPayEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryB2BVATEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryBestOfferEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryCatalogEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryCategoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryCategoryLevel" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryCategoryName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryCategoryParentID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryCategoryParentName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryCharacteristicsSets" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryExpired" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryIntlAutosFixedCat" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryKeywords" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryLeafCategory" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryLSD" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryNumOfItems" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryORPA" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryORRA" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryProductFinderIDs" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryProductSearchPageAvailable" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategorySellerGuaranteeEligible" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FreeAddedCategoryVirtual" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GetItFast" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GiftIcon" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GiftServices" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GroupCategoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HitCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HitCounter" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IntegratedMerchantCreditCardEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="InventoryTrackingMethod" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemCompatibilityListCompatibility" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemCompatibilityCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemPolicyViolationPolicyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemPolicyViolationPolicyText" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecifics" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LeadCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LimitedWarrantyEligible" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingCheckoutRedirectPreferenceProStoresStoreName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingCheckoutRedirectPreferenceSellerThirdPartyUsername" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDesignerLayoutID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDesignerThemeID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDesignerOptimalPictureSize" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsAdult" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsBestOfferAutoAcceptPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsBindingAuction" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsBuyItNowAvailable" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsCheckoutEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsConvertedBuyItNowPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsConvertedReservePriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsConvertedStartPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsEndTime" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsHasPublicMessages" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsHasReservePrice" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsHasUnansweredQuestions" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsLocalListingDistance" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsMinimumBestOfferMessage" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsMinimumBestOfferPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsPayPerLeadEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsRelistedItemID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsSecondChanceOriginalItemID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsSellerBusinessType" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsStartTime" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsTCROriginalItemID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDetailsViewItemURL" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingDuration" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingEnhancement" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingSubtype2" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ListingType" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LocalListing" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LocationDefaulted" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LotSize" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MechanicalCheckAccepted" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotorsGermanySearchable" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NewLeadCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PartnerCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PartnerName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PaymentAllowedSite" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PaymentDetailsDaysToFullPayment" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PaymentDetailsHoursToDeposit" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PaymentMethods" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PostalCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PrivateNotes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductListingDetails" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProxyItem" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="QuantityAvailable" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="QuantitySpecified" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="QuestionCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RegionID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Relisted" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RelistLink" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReservePriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReservePricecurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReturnPolicyRefund" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReturnPolicyRefundOption" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReturnPolicyReturnsAccepted" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReturnPolicyReturnsWithin" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReturnPolicyShippingCostPaidBy" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReturnPolicyWarrantyDuration" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReturnPolicyWarrantyOffered" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReturnPolicyWarrantyType" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ScheduleTime" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SearchDetailsPicture" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SearchDetailsRecentListing" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SearchDetailsBuyItNowEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerAboutMePage" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerBillingEmail" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerCharityAffiliationsCharityID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellereBayGoodStanding" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellereBayWikiReadOnly" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerEIASToken" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerEmail" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerEnterpriseSeller" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerFeedbackPrivate" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerFeedbackRatingStar" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerFeedbackScore" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerIDVerified" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerMotorsDealer" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerNewUser" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerPayPalAccountLevel" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerPayPalAccountStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerPayPalAccountType" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerPositiveFeedbackPercent" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerQualifiesForSelling" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerRegistrationAddress" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerRegistrationDate" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerSellerPaymentMethod" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerTUVLevel" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerUniqueNegativeFeedbackCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerUniqueNeutralFeedbackCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerUniquePositiveFeedbackCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerUserAnonymized" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerUserIDChanged" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerUserSubscription" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerVATID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerVATStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsAddressID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsAddressOwner" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsAddressRecordType" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsAddressStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsAddressUsage" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsCityName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsCompanyName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsCountry" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsCountryName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsCounty" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsExternalAddressID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsFirstName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsLastName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsInternationalName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsInternationalStateAndCity" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsInternationalStreet" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsPhone" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsPhoneCountryCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsPhoneCountryPrefix" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsPhoneLocalNumber" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsPostalCode" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsStateOrProvince" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsStreet" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsStreet1" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerContactDetailsStreet2" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerInventoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellerVacationNote" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusAdminEnded" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusBidCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusBidderCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusBidIncrementValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusBidIncrementcurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusConvertedCurrentPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusCurrentPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusFinalValueFeeValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusLeadCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusListingStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusMinimumToBid" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusPromotionalSaleDetailsEndTime" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusQuantitySold" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusReserveMet" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SellingStatusSecondChanceEligible" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShippingDetailsAllowPaymentEdit" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShippingDetailsApplyShippingDiscount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShippingDetailsCalculatedShippingDiscountDiscountName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShippingDetailsCalculatedShippingDiscountDiscountProfile" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShippingDetailsInsuranceFeeValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShipToLocations" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SKU" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SkypeEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SkypeID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StartPriceValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StartPricecurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StorefrontStoreName" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StorefrontStoreCategoryID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StorefrontStoreCategory2ID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SubTitle" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TaxCategory" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThirdPartyCheckout" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThirdPartyCheckoutIntegration" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TimeLeft" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TotalQuestionCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UpdateReturnPolicy" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UpdateSellerInfo" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UseTaxTable" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UUID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Variations" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="VATDetailsVATID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WatchCount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WatchCountSpecified" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ApplyBuyerProtectionBuyerProtectionSource" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ApplyBuyerProtectionBuyerProtectionStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ApplyShippingDiscount" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AutoPay" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BestOfferDetailsBestOffercurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BestOfferDetailsBestOfferValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BestOfferDetailsBestOfferStatus" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BestOfferDetailsBestOfferType" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BestOfferEnabled" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiddingDetailsBidAssistant" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiddingDetailsConvertedMaxBidcurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiddingDetailsConvertedMaxBidValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiddingDetailsMaxBidcurrencyID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiddingDetailsMaxBidValue" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiddingDetailsQuantityBid" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiddingDetailsQuantityWon" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BiddingDetailsWinning" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BidGroupItem" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific1" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific2" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific3" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific4" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific5" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific6" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific7" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific8" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific9" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific10" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific11" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific12" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific13" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific14" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific15" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific16" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific17" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific18" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific19" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific20" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific21" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific22" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific23" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific24" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific25" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific26" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific27" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific28" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific29" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific30" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific31" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific32" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific33" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific34" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific35" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific36" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific37" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific38" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific39" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific40" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific41" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific42" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific43" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific44" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific45" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific46" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific47" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific48" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific49" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific50" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific51" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific52" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific53" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific54" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific55" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific56" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific57" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific58" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific59" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific60" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific61" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific62" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific63" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific64" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific65" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific66" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific67" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific68" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific69" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific70" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific71" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific72" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific73" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific74" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific75" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific76" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific77" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific78" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific79" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific80" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific81" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific82" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific83" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific84" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific85" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific86" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific87" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific88" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific89" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific90" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific91" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific92" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific93" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific94" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific95" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific96" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific97" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific98" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific99" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemSpecific100" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>

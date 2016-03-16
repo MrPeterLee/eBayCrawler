@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="eBayFetch.exe" version="2.1.1.0" publicKeyToken="33869676aec24fe3" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="puzzle.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="eBayFetch" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="eBayFetch.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="eBay.Service.dll" size="1748992">
+      <assemblyIdentity name="eBay.Service" version="3.861.0.0" publicKeyToken="1D9D786A5932EAF0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>cXRqAJY119aVEO6+Gjv7Fq1UOFA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="eBay.Service.SDK.Attribute.dll" size="73728">
+      <assemblyIdentity name="eBay.Service.SDK.Attribute" version="3.861.0.0" publicKeyToken="1D9D786A5932EAF0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>OF4rtrEVXyOG8b+KWJ/Iis7N0PA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="eBay.Services.dll" size="81920">
+      <assemblyIdentity name="eBay.Services" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>PbGM65D3tMw0y9TwsVk/5LFdu34=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="eBayFetch.exe" size="26893824">
+      <assemblyIdentity name="eBayFetch" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>uIOwjgSau01RjxsMHLjUyZMawfM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.MSXML2.dll" size="184320">
+      <assemblyIdentity name="Interop.MSXML2" version="3.0.0.0" publicKeyToken="C7506F8C5FA78874" language="neutral" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>SmQxaNf7VWz18kwuHJ53iX/yNjE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Windows.Shell.dll" size="167808">
+      <assemblyIdentity name="Microsoft.Windows.Shell" version="3.5.41019.1" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>S66efBtmPeGHach1D6NpPm/2B8k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RibbonControlsLibrary.dll" size="802168">
+      <assemblyIdentity name="RibbonControlsLibrary" version="4.0.0.11019" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>yXJS6HZ2Q7SVRnRSjo58V7+D8Hs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Samples.Helper.dll" size="49152">
+      <assemblyIdentity name="Samples.Helper" version="3.861.0.0" publicKeyToken="1D9D786A5932EAF0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ya3sOUWB2iMCcN3wlExCXtoV+5M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SLF.dll" size="34304">
+      <assemblyIdentity name="SLF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Y/VmnGyo83RFfCyp+/vd3XwiNyw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="eBayFetch.exe.config" size="5855">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LqeNypjZfB6bsTvNVE2BScCkVsM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="eBayFetchDataModel.edmx.sql" size="23794">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>S0FKx2ZIWOJzvfm0ioLUy+cw/d8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="eBayFetchSQL.mdf" size="27525120" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nVG22j/mIC6uynmDGAXJKh8KWHY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="eBayFetchSQL_log.ldf" size="37158912" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>A73IV6FziprlBac+GswIWFZDjMs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="puzzle.ico" size="102134">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Im7kb7q8KVWv3EgUzHgTMOthxog=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=Home\HuiHui" issuerKeyHash="07bd68c67ebf4bf640b18478807a588f39c81921" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>FicJpyvlmwAjbCmLc8fEWYx6ovc=</DigestValue></Reference></SignedInfo><SignatureValue>cbVkI7kOM0wjL+p80sKxr0EdxH+2hBTQLmHXD0ksqZ1BUvba5nwXDoE4brQiDIQ6RkD07V9s7cZNdsaYzKV3J/LA7aI4ld6go9E0ZnslBjsqaRHFE9d6dE0yPy+jopKfwjQdzjjRqyEq86MUuos0J1CWCLuddwW8n1bWpHXadQ4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>l6gqWWc+Gj0KkzN2soNWUuF+dsQVdg+ngrWlfE+B7BKIcJnrYKSvNjNdQj4bSM42Pxd+gtKHyWWs5vFKHYNc+GQKOCbPje0XGhN6KBB8qZSrMgNnpH/u7nGugbC/v853ES42CscYh+9RcFzbUxPCzQbgCTgYa3P9ya8xx9YEyI8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="f7a27a8c59c4c7738b296c23009be52ba7092716" Description="" Url=""><as:assemblyIdentity name="eBayFetch.exe" version="2.1.1.0" publicKeyToken="33869676aec24fe3" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Home\HuiHui</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>vnGn2jmAjh1peyJybuFQspnKSaA=</DigestValue></Reference></SignedInfo><SignatureValue>h+wg34kiATxRKRhmUapLtO3jC2Q0VKJqU1C1EwEZGoWrhWNTn7/u8kD3jV0fzhBV0aUU+haPYSiWBwlK+HCZA6oFcQMj3YOKvoA1PfYL5idB/t9Q5h5+lL90l6eryp6YHA0L04azTOeQ2QTUeYtX8fWP/QK8FCEnMhFKY11xwSk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>l6gqWWc+Gj0KkzN2soNWUuF+dsQVdg+ngrWlfE+B7BKIcJnrYKSvNjNdQj4bSM42Pxd+gtKHyWWs5vFKHYNc+GQKOCbPje0XGhN6KBB8qZSrMgNnpH/u7nGugbC/v853ES42CscYh+9RcFzbUxPCzQbgCTgYa3P9ya8xx9YEyI8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQKmMCjY8vnL9KcWGW00U73DANBgkqhkiG9w0BAQUFADAhMR8wHQYDVQQDHhYASABvAG0AZQBcAEgAdQBpAEgAdQBpMB4XDTEwMTAxNzAyMjYzM1oXDTExMTAxNzA4MjYzM1owITEfMB0GA1UEAx4WAEgAbwBtAGUAXABIAHUAaQBIAHUAaTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAl6gqWWc+Gj0KkzN2soNWUuF+dsQVdg+ngrWlfE+B7BKIcJnrYKSvNjNdQj4bSM42Pxd+gtKHyWWs5vFKHYNc+GQKOCbPje0XGhN6KBB8qZSrMgNnpH/u7nGugbC/v853ES42CscYh+9RcFzbUxPCzQbgCTgYa3P9ya8xx9YEyI8CAwEAATANBgkqhkiG9w0BAQUFAAOBgQCSjI8Ch8sdtENfc45vwzk/V58G7KViNL2Rn9QUxZQjY+2CRQ1MPVlHzOt/iVzNoUkX523Kn+jM+IbNqbDxUO+CD19hLI7PzSDoLzGkJFOFBka6UV9UQhvYdhQZe3d89GTHLKbpEXuY/VbAmTt8VTuev+qdsQZGxmdTi1S8FegXQA==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
